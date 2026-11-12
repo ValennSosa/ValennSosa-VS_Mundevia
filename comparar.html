@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparar destinos · VS Mundévia</title>
+    <meta name="description" content="Compará dos destinos de VS Mundévia: clima, moneda, idiomas, cultura y datos geográficos.">
+    <meta property="og:title" content="Comparar destinos · VS Mundévia">
+    <meta property="og:description" content="Elegí dos lugares desde el buscador y compará sus características.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
+    <link rel="stylesheet" href="./styles/style.css">
+  </head>
+  <body>
+    <a class="u-skip-link" href="#contenido">Saltar al contenido</a>
+    <div data-app-header></div>
+
+    <main id="contenido" class="site-main page-shell">
+      <header class="page-header u-container">
+        <p class="page-header__eyebrow">Comparador</p>
+        <h1 class="page-header__title">Comparar destinos</h1>
+        <p class="page-header__lead" data-compare-status>
+          Seleccioná dos destinos con el buscador de sugerencias.
+        </p>
+      </header>
+
+      <section class="section section--tight">
+        <div class="u-container">
+          <div class="grid-feature">
+            <div class="u-surface" style="padding: 1rem;" data-search-root data-compare-slot="0">
+              <h2 class="h5">Destino A</h2>
+              <label class="u-sr-only" for="compare-a">Buscar destino A</label>
+              <input id="compare-a" class="form-control" type="search" placeholder="Buscar…" autocomplete="off" data-search-input>
+              <ul id="compare-suggestions-a" class="list-unstyled mt-2 mb-0" role="listbox" data-search-suggestions hidden></ul>
+            </div>
+            <div class="u-surface" style="padding: 1rem;" data-search-root data-compare-slot="1">
+              <h2 class="h5">Destino B</h2>
+              <label class="u-sr-only" for="compare-b">Buscar destino B</label>
+              <input id="compare-b" class="form-control" type="search" placeholder="Buscar…" autocomplete="off" data-search-input>
+              <ul id="compare-suggestions-b" class="list-unstyled mt-2 mb-0" role="listbox" data-search-suggestions hidden></ul>
+            </div>
+          </div>
+
+          <div class="placeholder-panel mt-4" data-aos="fade-up">
+            <h2 class="placeholder-panel__title">Tabla comparativa</h2>
+            <p class="u-mb-0">
+              Ubicación, clima, moneda, idiomas, cultura y datos geográficos — Etapa 5.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-app-footer></div>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/aos/dist/aos.js"></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

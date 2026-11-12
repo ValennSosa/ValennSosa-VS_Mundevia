@@ -1,0 +1,52 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+body {
+  font-family: $font-body;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+.display {
+  font-family: $font-display;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  @include text-balance;
+}
+
+h1,
+.display-1 {
+  font-size: clamp(2.4rem, 5vw, 4.25rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+}
+
+p {
+  max-width: 65ch;
+}
+
+a:not(.nav-link):not(.btn):not(.site-footer a) {
+  color: $color-sky-soft;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-gold-soft;
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
