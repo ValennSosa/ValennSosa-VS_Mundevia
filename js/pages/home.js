@@ -18,14 +18,13 @@ export async function initHomePage() {
   });
 
   const globeSlot = document.querySelector("[data-globe]");
-  // Three.js se cargará de forma diferida en la Etapa 2.
   let destinations = [];
   try {
     destinations = await getDestinations();
   } catch (error) {
     console.error(error);
   }
-  await initGlobe(globeSlot, { destinations: destinations.filter((d) => d.featured) });
+  await initGlobe(globeSlot, { destinations });
 
   await renderHomeCollections();
   renderContinents(destinations);

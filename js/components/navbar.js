@@ -22,7 +22,9 @@ function currentPageId() {
 export function renderNavbar(target) {
   if (!target) return;
 
-  const active = currentPageId();
+  const pageId = currentPageId();
+  // El catálogo es la sección Explorar. Mapa no se marca activo: el mapa Leaflet es una etapa posterior.
+  const active = pageId === "explorer" ? "home" : pageId;
 
   target.innerHTML = `
     <header class="site-header" data-navbar>

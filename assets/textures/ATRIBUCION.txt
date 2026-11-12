@@ -1,0 +1,9 @@
+earth-day.jpg
+Nombre: Blue Marble — land surface, ocean color and sea ice (Land ocean ice 2048)
+Archivo original: https://commons.wikimedia.org/wiki/File:Land_ocean_ice_2048.jpg
+Fuente indicada en el archivo: https://visibleearth.nasa.gov/view.php?id=57730
+Autores: NASA Goddard Space Flight Center. Imagen de Reto Stöckli (superficie terrestre, aguas poco profundas, nubes). Mejoras de Robert Simmon (color del océano, composición, globos 3D, animación). Datos y apoyo técnico: MODIS Land Group, MODIS Science Data Support Team, MODIS Atmosphere Group, MODIS Ocean Group. Datos adicionales: USGS EROS Data Center (topografía); USGS Terrestrial Remote Sensing Flagstaff Field Center (Antártida); Defense Meteorological Satellite Program (luces urbanas).
+Licencia del archivo alojado: Creative Commons Attribution-Share Alike 3.0
+https://creativecommons.org/licenses/by-sa/3.0/
+Medidas: 2048×1024 px. Uso: textura equirectangular del globo de inicio, sin modificaciones.
+La atribución visible está en el pie del globo.
