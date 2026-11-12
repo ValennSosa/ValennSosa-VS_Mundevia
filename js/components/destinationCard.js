@@ -1,30 +1,89 @@
-import { ROUTES } from "../config.js";
+import { destinationHref } from "../config.js";
+import { getImage } from "../data/destinations.js";
+
+const TYPE_FALLBACK = {
+  ciudad: "Ciudad",
+  natural: "Naturaleza",
+  historico: "Sitio histórico",
+  cultural: "Cultural",
+  arquitectonico: "Arquitectura",
+  costa: "Costa",
+  montana: "Montaña",
+};
 
 /**
- * Card reutilizable de destino.
- * Etapa 0: helper listo; se usará cuando exista el catálogo JSON.
+ * Pieza editorial de destino (no card genérica de dashboard).
  */
-export function createDestinationCard(destination) {
+export function createDestinationCard(destination, { labels = {}, variant = "editorial" } = {}) {
   const article = document.createElement("article");
-  article.className = "card-destination";
+  article.className =
+    variant === "featured" ? "spot spot--featured" : variant === "compact" ? "spot spot--compact" : "spot";
 
-  const href = `${ROUTES.destination}?id=${encodeURIComponent(destination.id || "")}`;
-  const image = destination.images?.[0] || "";
+  const href = destinationHref(destination.id);
+  const image = getImage(destination, 0);
+  const type = labels[destination.type] || TYPE_FALLBACK[destination.type] || destination.type;
   const meta = [destination.country, destination.continent].filter(Boolean).join(" · ");
 
   article.innerHTML = `
-    <div class="card-destination__media">
-      ${
-        image
-          ? `<img src="${image}" alt="${destination.name || "Destino"}" loading="lazy" width="640" height="400">`
-          : ""
-      }
-    </div>
-    <h3 class="card-destination__title">
-      <a href="${href}">${destination.name || "Destino"}</a>
-    </h3>
-    <p class="card-destination__meta">${meta}</p>
+    <a class="spot__link" href="${href}">
+      <div class="spot__media">
+        ${
+          image
+            ? `<img src="${image.url}" alt="${escapeAttr(image.alt || destination.name)}" loading="lazy" width="960" height="640">`
+            : `<div class="spot__placeholder" aria-hidden="true"></div>`
+        }
+      </div>
+      <div class="spot__body">
+        <p class="spot__eyebrow">${escapeHtml(type)}</p>
+        <h3 class="spot__title">${escapeHtml(destination.name || "Destino")}</h3>
+        <p class="spot__meta">${escapeHtml(meta)}</p>
+        <p class="spot__excerpt">${escapeHtml(trimText(destination.description || "", 140))}</p>
+      </div>
+    </a>
   `;
 
   return article;
+}
+
+export function createDestinationRow(destination, { labels = {} } = {}) {
+  const row = document.createElement("a");
+  row.className = "spot-row";
+  row.href = destinationHref(destination.id);
+
+  const image = getImage(destination, 0);
+  const type = labels[destination.type] || TYPE_FALLBACK[destination.type] || destination.type;
+
+  row.innerHTML = `
+    <div class="spot-row__media">
+      ${
+        image
+          ? `<img src="${image.url}" alt="${escapeAttr(image.alt || destination.name)}" loading="lazy" width="240" height="160">`
+          : ""
+      }
+    </div>
+    <div class="spot-row__body">
+      <p class="spot__eyebrow">${escapeHtml(type)}</p>
+      <h3 class="spot-row__title">${escapeHtml(destination.name)}</h3>
+      <p class="spot__meta">${escapeHtml(`${destination.city} · ${destination.country} · ${destination.continent}`)}</p>
+    </div>
+  `;
+
+  return row;
+}
+
+function trimText(text, max) {
+  if (text.length <= max) return text;
+  return `${text.slice(0, max - 1).trim()}…`;
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+}
+
+function escapeAttr(value) {
+  return escapeHtml(value).replaceAll("'", "&#39;");
 }

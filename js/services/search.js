@@ -1,36 +1,45 @@
 import { getDestinations } from "../data/destinations.js";
-import { ROUTES } from "../config.js";
+import { destinationHref } from "../config.js";
+
+function matchesQuery(destination, q) {
+  const fields = [
+    destination.name,
+    destination.city,
+    destination.country,
+    destination.continent,
+    destination.type,
+    ...(destination.tags || []),
+    ...(destination.languages || []),
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+  return fields.includes(q);
+}
 
 /**
- * Búsqueda por país, ciudad, continente, tipo y características.
- * Etapa 0: API lista; se conecta al UI en etapas siguientes.
+ * Búsqueda por nombre, ciudad, país, continente, categorías y etiquetas.
  */
-export async function searchDestinations(query = "") {
+export async function searchDestinations(query = "", { limit = 8 } = {}) {
   const q = query.trim().toLowerCase();
-  if (!q) return [];
+  if (q.length < 2) return [];
 
   const destinations = await getDestinations();
 
   return destinations
-    .filter((d) => {
-      const haystack = [
-        d.name,
-        d.city,
-        d.country,
-        d.continent,
-        d.type,
-        ...(d.tags || []),
-        ...(d.languages || []),
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-      return haystack.includes(q);
+    .filter((d) => matchesQuery(d, q))
+    .sort((a, b) => {
+      const aName = a.name.toLowerCase().startsWith(q) ? 0 : 1;
+      const bName = b.name.toLowerCase().startsWith(q) ? 0 : 1;
+      return aName - bName || (b.popularity || 0) - (a.popularity || 0);
     })
-    .slice(0, 8)
+    .slice(0, limit)
     .map((d) => ({
       id: d.id,
-      label: `${d.name} · ${d.country}`,
-      href: `${ROUTES.destination}?id=${encodeURIComponent(d.id)}`,
+      label: `${d.name} · ${d.city}`,
+      meta: `${d.country} · ${d.continent}`,
+      type: d.type,
+      href: destinationHref(d.id),
     }));
 }

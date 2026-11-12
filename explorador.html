@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explorador global · VS Mundévia</title>
-    <meta name="description" content="Navegá el mapa interactivo de VS Mundévia, filtrá por continente, país y categoría, y descubrí destinos destacados.">
+    <meta name="description" content="Explorá el catálogo de VS Mundévia: filtrá por continente, país y categoría, y descubrí destinos destacados.">
     <meta property="og:title" content="Explorador global · VS Mundévia">
-    <meta property="og:description" content="Mapa Leaflet, filtros y acceso accesible a destinos del mundo.">
+    <meta property="og:description" content="Catálogo filtrable y acceso accesible a destinos del mundo. El mapa Leaflet llega en una etapa posterior.">
     <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,28 +22,51 @@
     <main id="contenido" class="site-main page-shell">
       <header class="page-header u-container">
         <p class="page-header__eyebrow">Explorador global</p>
-        <h1 class="page-header__title">Mapa del mundo</h1>
+        <h1 class="page-header__title">Catálogo del mundo</h1>
         <p class="page-header__lead">
-          Pan, zoom y marcadores con Leaflet (carga diferida). El globo 3D vive en la home; aquí la navegación geográfica precisa.
+          Filtrá por continente, país y categoría. El mapa Leaflet se incorporará más adelante; esta lista es la vía principal y accesible de exploración.
         </p>
       </header>
 
       <section class="section section--tight">
-        <div class="u-container map-layout">
-          <div class="map-filters" aria-label="Filtros de exploración">
-            <span class="btn btn--ghost" aria-disabled="true">Continente</span>
-            <span class="btn btn--ghost" aria-disabled="true">País</span>
-            <span class="btn btn--ghost" aria-disabled="true">Categoría</span>
+        <div class="u-container explorer-layout">
+          <div class="explorer-toolbar">
+            <div class="search-field" data-search-root>
+              <label class="u-sr-only" for="explorer-search">Buscar destinos</label>
+              <input
+                id="explorer-search"
+                class="form-control search-field__input"
+                type="search"
+                placeholder="Buscar por destino, ciudad, país, continente o etiqueta…"
+                autocomplete="off"
+                data-search-input
+              >
+              <button class="search-field__clear" type="button" data-search-clear hidden aria-label="Limpiar búsqueda">×</button>
+              <ul id="explorer-suggestions" class="search-suggest" role="listbox" data-search-suggestions hidden></ul>
+            </div>
+
+            <div class="filter-bar" aria-label="Filtros de exploración">
+              <label class="filter-bar__field">
+                <span class="filter-bar__label">Continente</span>
+                <select class="form-select" data-filter-continent></select>
+              </label>
+              <label class="filter-bar__field">
+                <span class="filter-bar__label">País</span>
+                <select class="form-select" data-filter-country></select>
+              </label>
+              <label class="filter-bar__field">
+                <span class="filter-bar__label">Categoría</span>
+                <select class="form-select" data-filter-category></select>
+              </label>
+              <button class="btn btn--ghost" type="button" data-filters-clear>Limpiar filtros</button>
+            </div>
+
+            <p class="explorer-status" data-explorer-status aria-live="polite">Cargando catálogo…</p>
           </div>
 
-          <div class="map" data-map role="region" aria-label="Mapa interactivo"></div>
+          <div class="map map--deferred" data-map role="region" aria-label="Mapa interactivo (próxima etapa)"></div>
 
-          <div class="placeholder-panel" data-aos="fade-up">
-            <h2 class="placeholder-panel__title">Lista accesible de destinos</h2>
-            <p class="u-mb-0">
-              Alternativa al mapa: listado filtrable por teclado. Se conectará al catálogo JSON en la Etapa 1–3.
-            </p>
-          </div>
+          <div class="explorer-list" data-explorer-list aria-live="polite"></div>
         </div>
       </section>
     </main>

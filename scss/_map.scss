@@ -1,33 +1,101 @@
 @use "variables" as *;
+@use "mixins" as *;
 
-// Etapa 0: contenedor base. Leaflet se carga de forma diferida solo en explorador.html.
 .map {
   width: 100%;
-  min-height: 28rem;
-  height: min(70vh, 40rem);
+  min-height: 12rem;
   border: 1px solid $color-border;
   border-radius: $radius-lg;
   overflow: hidden;
   background: $color-slate;
 }
 
+.map--deferred {
+  min-height: 10rem;
+}
+
 .map__fallback {
   display: grid;
   place-items: center;
   height: 100%;
-  min-height: 28rem;
+  min-height: 10rem;
   padding: $space-4;
   color: $color-text-muted;
   text-align: center;
 }
 
-.map-layout {
+.explorer-layout {
   display: grid;
   gap: $space-4;
 }
 
-.map-filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: $space-2;
+.explorer-toolbar {
+  display: grid;
+  gap: $space-3;
+}
+
+.filter-bar {
+  display: grid;
+  gap: $space-3;
+
+  @include respond-up($bp-md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: end;
+  }
+
+  @include respond-up($bp-lg) {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+  }
+}
+
+.filter-bar__field {
+  display: grid;
+  gap: $space-1;
+}
+
+.filter-bar__label {
+  color: $color-text-muted;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.form-select {
+  background-color: rgba(7, 11, 20, 0.7);
+  border-color: $color-border;
+  color: $color-text;
+
+  &:focus {
+    border-color: $color-sky;
+    box-shadow: 0 0 0 0.2rem rgba(126, 184, 212, 0.2);
+  }
+
+  option {
+    color: #111;
+  }
+}
+
+.explorer-status {
+  margin: 0;
+  color: $color-gold-soft;
+  font-size: 0.9rem;
+}
+
+.explorer-list {
+  display: grid;
+  gap: $space-3;
+}
+
+.empty-state {
+  padding: $space-5;
+  border: 1px dashed $color-border;
+  border-radius: $radius-lg;
+  text-align: center;
+  color: $color-text-muted;
+}
+
+.empty-state__title {
+  margin: 0 0 $space-2;
+  color: $color-text;
+  font-family: $font-display;
 }

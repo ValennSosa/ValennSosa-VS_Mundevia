@@ -31,7 +31,7 @@
             Entrá sin un destino en mente. Dejá que la curiosidad te lleve a países, paisajes y culturas que quizás nunca habías escuchado mencionar.
           </p>
           <div class="hero__actions" data-aos="fade-up" data-aos-delay="180">
-            <a class="btn btn--primary" href="./explorador.html">Abrir mapa global</a>
+            <a class="btn btn--primary" href="./explorador.html">Explorar catálogo</a>
             <a class="btn btn--ghost" href="./sorprendeme.html">Sorpréndeme</a>
           </div>
         </div>
@@ -39,24 +39,35 @@
 
       <section class="section" aria-labelledby="search-title">
         <div class="u-container u-stack">
-          <h2 id="search-title">Buscar destinos</h2>
-          <p class="u-text-muted u-mb-0">País, ciudad, continente, tipo o características. Sugerencias dinámicas al escribir.</p>
-          <div class="u-surface" style="padding: 1rem;" data-search-root>
+          <h2 id="search-title">¿A dónde te lleva la curiosidad?</h2>
+          <p class="u-text-muted u-mb-0">Buscá por destino, ciudad, país, continente o etiquetas. Las sugerencias aparecen mientras escribís.</p>
+          <div class="search-field search-field--lg" data-search-root>
             <label class="u-sr-only" for="home-search">Buscar destinos</label>
             <input
               id="home-search"
-              class="form-control"
+              class="form-control search-field__input"
               type="search"
-              placeholder="Ej. Kyoto, Patagonia, desierto…"
+              placeholder="Ej. Kioto, Patagonia, desierto, UNESCO…"
               autocomplete="off"
               data-search-input
             >
-            <ul id="search-suggestions" class="list-unstyled mt-2 mb-0" role="listbox" data-search-suggestions hidden></ul>
+            <button class="search-field__clear" type="button" data-search-clear hidden aria-label="Limpiar búsqueda">×</button>
+            <ul id="search-suggestions" class="search-suggest" role="listbox" data-search-suggestions hidden></ul>
           </div>
-          <p>
+          <p class="u-text-muted">
             <a href="./explorador.html">Alternativa sin globo:</a>
-            explorá el catálogo y el mapa, o usá la navegación por teclado del menú.
+            abrí el catálogo filtrable o navegá por teclado desde el menú.
           </p>
+        </div>
+      </section>
+
+      <section class="section section--tight" aria-labelledby="featured-title">
+        <div class="u-container u-stack-lg">
+          <div>
+            <h2 id="featured-title">Destinos que abren el mapa</h2>
+            <p class="u-text-muted">Una selección destacada para empezar a explorar sin rumbo fijo.</p>
+          </div>
+          <div class="spot-mosaic" data-home-featured></div>
         </div>
       </section>
 
@@ -64,37 +75,18 @@
         <div class="u-container">
           <h2 id="continents-title" data-aos="fade-up">Explorar por continente</h2>
           <p class="u-text-muted" data-aos="fade-up">Acceso textual y accesible, independiente del globo 3D.</p>
-          <div class="grid-feature" data-aos="fade-up">
-            <a class="placeholder-panel" href="./explorador.html?continente=Africa">África</a>
-            <a class="placeholder-panel" href="./explorador.html?continente=América">América</a>
-            <a class="placeholder-panel" href="./explorador.html?continente=Asia">Asia</a>
-            <a class="placeholder-panel" href="./explorador.html?continente=Europa">Europa</a>
-            <a class="placeholder-panel" href="./explorador.html?continente=Oceanía">Oceanía</a>
-            <a class="placeholder-panel" href="./explorador.html?continente=Antártida">Antártida</a>
-          </div>
+          <div class="continent-grid" data-home-continents data-aos="fade-up"></div>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="teasers-title">
+      <section class="section" aria-labelledby="popular-title">
         <div class="u-container u-stack-lg">
-          <div>
-            <h2 id="teasers-title">Próximas secciones</h2>
-            <p class="u-text-muted">Estructura lista para destinos populares, descubrimientos aleatorios y datos curiosos.</p>
+          <div class="section-heading">
+            <h2 id="popular-title">Rutas con eco</h2>
+            <p class="u-text-muted">Lugares frecuentes en la curiosidad colectiva, listos para abrir en ficha compartible.</p>
           </div>
-          <div class="grid-feature">
-            <div class="placeholder-panel" data-aos="fade-up">
-              <h3 class="placeholder-panel__title">Destinos populares</h3>
-              <p class="u-mb-0">Se alimentarán desde el JSON en la Etapa 1.</p>
-            </div>
-            <div class="placeholder-panel" data-aos="fade-up" data-aos-delay="80">
-              <h3 class="placeholder-panel__title">Descubrimientos</h3>
-              <p class="u-mb-0">Teaser hacia Sorpréndeme y fichas compartibles.</p>
-            </div>
-            <div class="placeholder-panel" data-aos="fade-up" data-aos-delay="160">
-              <h3 class="placeholder-panel__title">Dato curioso</h3>
-              <p class="u-mb-0">Rotación de curiosidades verificables del catálogo.</p>
-            </div>
-          </div>
+          <div class="spot-rail spot-rail--wrap" data-home-popular></div>
+          <aside class="curiosity" data-home-curiosity data-aos="fade-up"></aside>
         </div>
       </section>
     </main>

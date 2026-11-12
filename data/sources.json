@@ -1,0 +1,652 @@
+{
+  "meta": {
+    "updated": "2026-11-12",
+    "project": "vs-mundevia",
+    "note": "Registro de procedencia de los datos principales. Cada enlace guardado respondió el 12 de noviembre de 2026. Los textos culturales no llevan una cita después de cada oración.",
+    "limitations": "whc.unesco.org respondió 403 en todas las fichas consultadas, así que ninguna página de UNESCO quedó como fuente comprobada. iso.org también respondió 403; los códigos de moneda se apoyan en SIX, la agencia de mantenimiento de ISO 4217, y en la lista pública ISO 4217. Algunos portales turísticos no abrieron (capetown.travel, egypt.travel, parisjetaime, tourism.rajasthan.gov.in, cdmx.gob.mx) y se sustituyeron por otro sitio institucional del mismo destino o del organismo nacional."
+  },
+  "shared": [
+    {
+      "publisher": "SIX",
+      "title": "Agencia de mantenimiento de ISO 4217",
+      "url": "https://www.six-group.com/en/products-services/financial-information/market-reference-data/data-standards.html",
+      "kind": "moneda",
+      "status": 200
+    },
+    {
+      "publisher": "Wikipedia",
+      "title": "ISO 4217",
+      "url": "https://es.wikipedia.org/wiki/ISO_4217",
+      "kind": "moneda",
+      "status": 200
+    },
+    {
+      "publisher": "Secretaría del Tratado Antártico",
+      "title": "Tratado Antártico",
+      "url": "https://www.ats.aq/e/antarctictreaty.html",
+      "kind": "institucional",
+      "status": 200
+    },
+    {
+      "publisher": "Wikimedia Commons",
+      "title": "Licencias aceptadas para las fotografías",
+      "url": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+      "kind": "imagen",
+      "status": 200
+    }
+  ],
+  "destinations": {
+    "marrakech": {
+      "sources": [
+        {
+          "publisher": "Oficina Nacional Marroquí de Turismo",
+          "title": "Marrakech",
+          "url": "https://www.visitmorocco.com/en/travel/marrakesh",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Marrakech",
+          "url": "https://es.wikipedia.org/wiki/Marrakech",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "ciudad-del-cabo": {
+      "sources": [
+        {
+          "publisher": "Ciudad del Cabo",
+          "title": "Sitio municipal",
+          "url": "https://www.capetown.gov.za/",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Ciudad del Cabo",
+          "url": "https://es.wikipedia.org/wiki/Ciudad_del_Cabo",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "cataratas-victoria": {
+      "sources": [
+        {
+          "publisher": "Zambia Tourism",
+          "title": "Victoria Falls",
+          "url": "https://www.zambiatourism.com/destinations/waterfalls/victoria-falls/",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Cataratas Victoria",
+          "url": "https://es.wikipedia.org/wiki/Cataratas_Victoria",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "serengeti": {
+      "sources": [
+        {
+          "publisher": "Tanzania National Parks",
+          "title": "Serengeti",
+          "url": "https://www.tanzaniaparks.go.tz/",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Parque nacional Serengueti",
+          "url": "https://es.wikipedia.org/wiki/Parque_nacional_Serengueti",
+          "kind": "geografia",
+          "status": 200
+        }
+      ],
+      "coordinates": {
+        "lat": -2.4361,
+        "lng": 34.8211,
+        "represents": "Seronera, el sector central del Parque Nacional Serengueti. El punto anterior (-2.3333, 34.8333) quedaba unos 11 km al norte, también dentro del parque.",
+        "checkedAgainst": "https://en.wikipedia.org/wiki/Seronera"
+      }
+    },
+    "luxor": {
+      "sources": [
+        {
+          "publisher": "Ministerio de Turismo y Antigüedades de Egipto",
+          "title": "Monumentos de Egipto",
+          "url": "https://egymonuments.gov.eg/",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Luxor",
+          "url": "https://es.wikipedia.org/wiki/Luxor",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "machu-picchu": {
+      "sources": [
+        {
+          "publisher": "PromPerú",
+          "title": "Machu Picchu",
+          "url": "https://www.peru.travel/es/destinos/machu-picchu",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Machu Picchu",
+          "url": "https://es.wikipedia.org/wiki/Machu_Picchu",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "iguazu": {
+      "sources": [
+        {
+          "publisher": "Parques Nacionales de Argentina",
+          "title": "Iguazú",
+          "url": "https://www.argentina.gob.ar/parquesnacionales/nea/parque-nacional-iguazu",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Cataratas del Iguazú",
+          "url": "https://es.wikipedia.org/wiki/Cataratas_del_Iguaz%C3%BA",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "patagonia-chalten": {
+      "sources": [
+        {
+          "publisher": "Parques Nacionales de Argentina",
+          "title": "Los Glaciares",
+          "url": "https://www.argentina.gob.ar/parquesnacionales/patagonia-austral/parque-nacional-los-glaciares",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Parque nacional Los Glaciares",
+          "url": "https://es.wikipedia.org/wiki/Parque_nacional_Los_Glaciares",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "nueva-york": {
+      "sources": [
+        {
+          "publisher": "NYC Tourism",
+          "title": "Nueva York",
+          "url": "https://www.nyctourism.com/",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Nueva York",
+          "url": "https://es.wikipedia.org/wiki/Nueva_York",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "la-habana": {
+      "sources": [
+        {
+          "publisher": "Gobierno de La Habana",
+          "title": "Portal del ciudadano de La Habana",
+          "url": "https://www.lahabana.gob.cu/",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "La Habana",
+          "url": "https://es.wikipedia.org/wiki/La_Habana",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "banff": {
+      "sources": [
+        {
+          "publisher": "Parks Canada",
+          "title": "Banff",
+          "url": "https://parks.canada.ca/pn-np/ab/banff",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Parque nacional Banff",
+          "url": "https://es.wikipedia.org/wiki/Parque_nacional_Banff",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "cartagena": {
+      "sources": [
+        {
+          "publisher": "Colombia Travel",
+          "title": "Cartagena de Indias",
+          "url": "https://colombia.travel/es/cartagena-de-indias",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Cartagena de Indias",
+          "url": "https://es.wikipedia.org/wiki/Cartagena_de_Indias",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "cusco": {
+      "sources": [
+        {
+          "publisher": "PromPerú",
+          "title": "Cusco",
+          "url": "https://www.peru.travel/es/destinos/cusco",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Cuzco",
+          "url": "https://es.wikipedia.org/wiki/Cuzco",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "ciudad-de-mexico": {
+      "sources": [
+        {
+          "publisher": "Secretaría de Turismo de México",
+          "title": "SECTUR",
+          "url": "https://www.gob.mx/sectur",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Ciudad de México",
+          "url": "https://es.wikipedia.org/wiki/Ciudad_de_M%C3%A9xico",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "kyoto": {
+      "sources": [
+        {
+          "publisher": "Kyoto Tourism",
+          "title": "Kioto",
+          "url": "https://kyoto.travel/en/",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Kioto",
+          "url": "https://es.wikipedia.org/wiki/Kioto",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "petra": {
+      "sources": [
+        {
+          "publisher": "Visit Jordan",
+          "title": "Petra",
+          "url": "https://international.visitjordan.com/wheretogo/petra/",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Petra",
+          "url": "https://es.wikipedia.org/wiki/Petra",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "angkor": {
+      "sources": [
+        {
+          "publisher": "Tourism Cambodia",
+          "title": "Angkor",
+          "url": "https://www.tourismcambodia.com/attractions/angkor.htm",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Angkor",
+          "url": "https://es.wikipedia.org/wiki/Angkor",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "ubud-bali": {
+      "sources": [
+        {
+          "publisher": "Indonesia Travel",
+          "title": "Indonesia",
+          "url": "https://www.indonesia.travel/us/en",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Ubud",
+          "url": "https://es.wikipedia.org/wiki/Ubud",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "estambul": {
+      "sources": [
+        {
+          "publisher": "GoTürkiye",
+          "title": "Turquía",
+          "url": "https://goturkiye.com/",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Estambul",
+          "url": "https://es.wikipedia.org/wiki/Estambul",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "tokio": {
+      "sources": [
+        {
+          "publisher": "Tokyo Convention & Visitors Bureau",
+          "title": "Tokio",
+          "url": "https://www.gotokyo.org/en/",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Tokio",
+          "url": "https://es.wikipedia.org/wiki/Tokio",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "jaipur": {
+      "sources": [
+        {
+          "publisher": "Incredible India",
+          "title": "Jaipur",
+          "url": "https://www.incredibleindia.gov.in/en/rajasthan/jaipur",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Jaipur",
+          "url": "https://es.wikipedia.org/wiki/Jaipur",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "paris": {
+      "sources": [
+        {
+          "publisher": "Ville de Paris",
+          "title": "París",
+          "url": "https://www.paris.fr/",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "París",
+          "url": "https://es.wikipedia.org/wiki/Par%C3%ADs",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "roma": {
+      "sources": [
+        {
+          "publisher": "Turismo Roma",
+          "title": "Roma",
+          "url": "https://www.turismoroma.it/en",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Roma",
+          "url": "https://es.wikipedia.org/wiki/Roma",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "reikiavik": {
+      "sources": [
+        {
+          "publisher": "Visit Reykjavík",
+          "title": "Reikiavik",
+          "url": "https://visitreykjavik.is/",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Reikiavik",
+          "url": "https://es.wikipedia.org/wiki/Reikiavik",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "santorini": {
+      "sources": [
+        {
+          "publisher": "Visit Greece",
+          "title": "Santorini",
+          "url": "https://www.visitgreece.gr/en/islands/cyclades/santorini",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Santorini",
+          "url": "https://es.wikipedia.org/wiki/Santorini",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "praga": {
+      "sources": [
+        {
+          "publisher": "Prague City Tourism",
+          "title": "Praga",
+          "url": "https://prague.eu/en/",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Praga",
+          "url": "https://es.wikipedia.org/wiki/Praga",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "edimburgo": {
+      "sources": [
+        {
+          "publisher": "VisitScotland",
+          "title": "Edimburgo",
+          "url": "https://www.visitscotland.com/places-to-go/edinburgh",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Edimburgo",
+          "url": "https://es.wikipedia.org/wiki/Edimburgo",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "barcelona": {
+      "sources": [
+        {
+          "publisher": "Barcelona Turisme",
+          "title": "Barcelona",
+          "url": "https://thisisbarcelona.com/",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Barcelona",
+          "url": "https://es.wikipedia.org/wiki/Barcelona",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "sydney": {
+      "sources": [
+        {
+          "publisher": "Destination NSW",
+          "title": "Sídney",
+          "url": "https://www.sydney.com/",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Sídney",
+          "url": "https://es.wikipedia.org/wiki/S%C3%ADdney",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "queenstown": {
+      "sources": [
+        {
+          "publisher": "Queenstown NZ",
+          "title": "Queenstown",
+          "url": "https://www.queenstownnz.co.nz/",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Queenstown",
+          "url": "https://es.wikipedia.org/wiki/Queenstown_(Nueva_Zelanda)",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "uluru": {
+      "sources": [
+        {
+          "publisher": "Parks Australia",
+          "title": "Uluru-Kata Tjuta",
+          "url": "https://uluru.gov.au/",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Uluru",
+          "url": "https://es.wikipedia.org/wiki/Uluru",
+          "kind": "geografia",
+          "status": 200
+        }
+      ]
+    },
+    "gran-barrera": {
+      "sources": [
+        {
+          "publisher": "Great Barrier Reef Marine Park Authority",
+          "title": "Gran Barrera de Coral",
+          "url": "https://www.gbrmpa.gov.au/",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Gran Barrera de Coral",
+          "url": "https://es.wikipedia.org/wiki/Gran_Barrera_de_Coral",
+          "kind": "geografia",
+          "status": 200
+        }
+      ],
+      "coordinates": {
+        "lat": -18.2871,
+        "lng": 147.6992,
+        "represents": "Punto medio de uso habitual del sistema arrecifal, en el mar del Coral (18°17′ S, 147°42′ E). No es una localidad ni el acceso desde Cairns. La ficha de Wikipedia en inglés marca hoy otro punto, frente a Cairns (-16.4, 145.8).",
+        "checkedAgainst": "https://en.wikipedia.org/wiki/Great_Barrier_Reef"
+      }
+    },
+    "peninsula-antartica": {
+      "sources": [
+        {
+          "publisher": "Secretaría del Tratado Antártico",
+          "title": "Sistema del Tratado Antártico",
+          "url": "https://www.ats.aq/index_e.html",
+          "kind": "institucional",
+          "status": 200
+        },
+        {
+          "publisher": "Wikipedia",
+          "title": "Península Antártica",
+          "url": "https://es.wikipedia.org/wiki/Pen%C3%ADnsula_Ant%C3%A1rtica",
+          "kind": "geografia",
+          "status": 200
+        }
+      ],
+      "coordinates": {
+        "lat": -63.2134,
+        "lng": -57.3015,
+        "represents": "Prime Head, el cabo más al norte de la península Trinidad y de la Península Antártica. Las fotografías muestran el canal Lemaire y Andvord Bay, más al sur sobre la misma península.",
+        "checkedAgainst": "https://en.wikipedia.org/wiki/Prime_Head"
+      }
+    }
+  }
+}
