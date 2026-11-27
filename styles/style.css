@@ -160,6 +160,10 @@ main {
   color: #9aabbf;
 }
 
+.page-header .hero__actions {
+  margin-top: 1.5rem;
+}
+
 .placeholder-panel {
   padding: 2.5rem;
   background: rgba(12, 21, 38, 0.85);

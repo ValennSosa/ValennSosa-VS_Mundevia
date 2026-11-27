@@ -16,6 +16,7 @@ export async function initDestinationPage() {
   const id = params.get("id");
 
   if (!id) {
+    markNotIndexable();
     root.innerHTML = emptyState(
       "Elegí un destino",
       "Abrí una ficha desde el explorador, el buscador o un enlace compartido con el formato destino.html?id=slug."
@@ -26,6 +27,7 @@ export async function initDestinationPage() {
   try {
     const [destination, meta] = await Promise.all([getDestinationById(id), getCatalogMeta()]);
     if (!destination) {
+      markNotIndexable();
       root.innerHTML = emptyState(
         "Destino no encontrado",
         `No hay un lugar con el identificador “${id}”. Probá otra búsqueda en el explorador.`,
@@ -40,6 +42,7 @@ export async function initDestinationPage() {
     updateDocumentMeta(destination);
   } catch (error) {
     console.error(error);
+    markNotIndexable();
     root.innerHTML = emptyState(
       "No pudimos cargar la ficha",
       "Revisá tu conexión o volvé a intentar en unos segundos."
@@ -171,15 +174,47 @@ function renderDestination(root, destination, { labels, related }) {
 }
 
 function updateDocumentMeta(destination) {
-  document.title = `${destination.name} · VS Mundévia`;
+  const title = `${destination.name} · VS Mundévia`;
+  const summary = destination.description.slice(0, 160);
+  const url = `https://vs-mundevia.vercel.app/${ROUTES.destination}?id=${encodeURIComponent(destination.id)}`;
+  document.title = title;
   const description = document.querySelector('meta[name="description"]');
-  if (description) {
-    description.setAttribute("content", destination.description.slice(0, 160));
+  if (description) description.setAttribute("content", summary);
+  const content = {
+    'meta[property="og:title"]': title,
+    'meta[property="og:description"]': summary,
+    'meta[name="twitter:title"]': title,
+    'meta[name="twitter:description"]': summary,
+  };
+  Object.entries(content).forEach(([selector, value]) => {
+    document.querySelector(selector)?.setAttribute("content", value);
+  });
+  let ogUrl = document.querySelector('meta[property="og:url"]');
+  if (!ogUrl) {
+    ogUrl = document.createElement("meta");
+    ogUrl.setAttribute("property", "og:url");
+    document.head.appendChild(ogUrl);
   }
-  const ogTitle = document.querySelector('meta[property="og:title"]');
-  if (ogTitle) ogTitle.setAttribute("content", `${destination.name} · VS Mundévia`);
-  const ogDescription = document.querySelector('meta[property="og:description"]');
-  if (ogDescription) ogDescription.setAttribute("content", destination.description.slice(0, 160));
+  ogUrl.setAttribute("content", url);
+  setCanonical(url);
+}
+
+function setCanonical(url) {
+  const existing = document.querySelectorAll('link[rel="canonical"]');
+  const link = existing[0] || document.createElement("link");
+  if (!link.isConnected) {
+    link.setAttribute("rel", "canonical");
+    document.head.appendChild(link);
+  }
+  link.setAttribute("href", url);
+  existing.forEach((extra, index) => {
+    if (index > 0) extra.remove();
+  });
+}
+
+function markNotIndexable() {
+  const robots = document.querySelector('meta[name="robots"]');
+  if (robots) robots.setAttribute("content", "noindex, follow");
 }
 
 function formatCurrency(currency) {

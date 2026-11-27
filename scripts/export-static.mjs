@@ -12,6 +12,8 @@ const files = [
   "favoritos.html",
   "comparar.html",
   "sorprendeme.html",
+  "404.html",
+  "favicon.ico",
   "sitemap.xml",
   "robots.txt",
 ];

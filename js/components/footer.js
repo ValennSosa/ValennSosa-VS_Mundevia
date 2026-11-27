@@ -25,7 +25,7 @@ export function renderFooter(target) {
           <ul class="site-footer__list">
             <li><a href="${ROUTES.compare}">Comparar destinos</a></li>
             <li><a href="${ROUTES.favorites}">Favoritos</a></li>
-            <li><a href="${ROUTES.destination}?id=">Fichas de destino</a></li>
+            <li><a href="${ROUTES.explorer}#catalogo">Fichas de destino</a></li>
           </ul>
         </div>
       </div>

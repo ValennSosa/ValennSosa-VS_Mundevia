@@ -49,6 +49,10 @@ main {
   color: $color-text-muted;
 }
 
+.page-header .hero__actions {
+  margin-top: $space-4;
+}
+
 .placeholder-panel {
   padding: $space-5;
   background: $color-surface;
