@@ -14,6 +14,11 @@ export const ROUTES = {
   favorites: "favoritos.html",
 };
 
+/** Formato compartible de una ficha: destino.html?id=<slug>. */
+export function destinationHref(id) {
+  return `${ROUTES.destination}?id=${encodeURIComponent(id || "")}`;
+}
+
 export const DATA_PATHS = {
   destinations: "./data/destinations.json",
 };

@@ -1,9 +1,1929 @@
 {
   "meta": {
     "version": 1,
-    "updated": "2026-03-11",
-    "imageStrategy": "external-urls",
-    "notes": "Todas las URLs de imagen deben vivir aquí. En el futuro se pueden reemplazar por assets locales en /assets/images."
+    "updated": "2026-03-12",
+    "project": "vs-mundevia",
+    "imageStrategy": "wikimedia-commons-verified",
+    "imagePolicy": "Cada imagen se eligió en Wikimedia Commons y se guardó con autor, licencia específica y enlace a la licencia. Solo se aceptan dominio público, CC0, CC BY y CC BY-SA. No se usan archivos con NC o ND.",
+    "sourcesNote": "La procedencia de los datos principales está en data/sources.json. Allí solo figuran enlaces que respondieron al comprobarlos.",
+    "typeLabels": {
+      "ciudad": "Ciudad",
+      "natural": "Naturaleza",
+      "historico": "Sitio histórico",
+      "cultural": "Cultural",
+      "arquitectonico": "Arquitectura",
+      "costa": "Costa",
+      "montana": "Montaña"
+    },
+    "factPolicy": "Los datos principales (lugar, coordenadas, moneda, idioma y condición patrimonial) quedan documentados en data/sources.json, con la URL y el resultado de la comprobación. No hay una cita después de cada oración cultural."
   },
-  "destinations": []
+  "destinations": [
+    {
+      "id": "marrakech",
+      "name": "Marrakech",
+      "type": "ciudad",
+      "city": "Marrakech",
+      "country": "Marruecos",
+      "continent": "África",
+      "coords": {
+        "lat": 31.6295,
+        "lng": -7.9811
+      },
+      "languages": [
+        "Árabe",
+        "Amazigh (bereber)",
+        "Francés (uso amplio, no oficial)"
+      ],
+      "currency": {
+        "code": "MAD",
+        "name": "Dírham marroquí"
+      },
+      "climate": "Clima semiárido: veranos muy calurosos e inviernos suaves y secos.",
+      "bestSeason": "Marzo–mayo y septiembre–noviembre, con temperaturas más templadas para recorrer la medina.",
+      "description": "Marrakech concentra zocos, palacios y jardines en torno a la plaza Jemaa el-Fna. Su medina, Patrimonio de la Humanidad, combina arquitectura histórica y vida urbana intensa.",
+      "culture": "Cruce de tradiciones árabes, bereberes y andalusíes. Jemaa el-Fna funciona como escenario vivo de narradores, músicos y gastronomía callejera.",
+      "traditions": "El té de menta, los hammams y las celebraciones religiosas del calendario islámico estructuran buena parte de la vida social.",
+      "gastronomy": "Tagine, cuscús, pastilla y especias como comino, azafrán y ras el hanout.",
+      "curiosities": [
+        "Jemaa el-Fna está reconocida por la UNESCO como patrimonio cultural inmaterial.",
+        "Los jardines de la Menara forman parte del paisaje histórico de la ciudad."
+      ],
+      "tags": [
+        "medina",
+        "zoco",
+        "unesco",
+        "norte-de-africa"
+      ],
+      "featured": true,
+      "popularity": 90,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Jemaa_el-Fnaa_at_night.jpg/1280px-Jemaa_el-Fnaa_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Marrakech. The Jemaa el-Fnaa market square in Marrakech at night.",
+          "credit": "procsilas",
+          "source": "Wikimedia Commons",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "file": "File:Jemaa el-Fnaa at night.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Souk_-_Jemaa_el-Fnaa_%287160955343%29.jpg/1280px-Souk_-_Jemaa_el-Fnaa_%287160955343%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Marrakech. The square is edged along one side by the Marrakesh souk, a traditional North African market catering both for the common daily needs of the locals, and for the tourist ",
+          "credit": "Jorge Láscar from Australia",
+          "source": "Wikimedia Commons",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "file": "File:Souk - Jemaa el-Fnaa (7160955343).jpg"
+        }
+      ]
+    },
+    {
+      "id": "ciudad-del-cabo",
+      "name": "Ciudad del Cabo",
+      "type": "ciudad",
+      "city": "Ciudad del Cabo",
+      "country": "Sudáfrica",
+      "continent": "África",
+      "coords": {
+        "lat": -33.9249,
+        "lng": 18.4241
+      },
+      "languages": [
+        "Inglés",
+        "Afrikaans",
+        "isiXhosa"
+      ],
+      "currency": {
+        "code": "ZAR",
+        "name": "Rand sudafricano"
+      },
+      "climate": "Clima mediterráneo: veranos secos y cálidos, inviernos más húmedos.",
+      "bestSeason": "Octubre–abril para aire libre; junio–agosto para avistaje de ballenas en la costa.",
+      "description": "Entre la Montaña de la Mesa y el océano, Ciudad del Cabo combina paisaje dramático, barrios históricos y una escena cultural contemporánea.",
+      "culture": "Herencia khoisan, colonial y africana contemporánea. Robben Island y el Distrito Seis evocan la memoria del apartheid.",
+      "traditions": "Mercados, festivales de música y la cultura del braai (asado) son parte del tejido social.",
+      "gastronomy": "Mariscos, bobotie, snoek ahumado y vinos de Constantia y Stellenbosch.",
+      "curiosities": [
+        "La Montaña de la Mesa es un ícono geológico y urbano de la ciudad.",
+        "El punto más austral de África continental es el Cabo Agulhas, no el de Buena Esperanza."
+      ],
+      "tags": [
+        "costa",
+        "montana",
+        "ciudad",
+        "patrimonio"
+      ],
+      "featured": true,
+      "popularity": 88,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Table_Mountain%2C_Cape_Town_%28P1050264%29.jpg/1280px-Table_Mountain%2C_Cape_Town_%28P1050264%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Ciudad del Cabo. Cape dassie on Table Mountain, Cape Town",
+          "credit": "Matti Blume",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:Table Mountain, Cape Town (P1050264).jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Cape_Town_%28ZA%29%2C_Table_Mountain_--_2024_--_2821.jpg/1280px-Cape_Town_%28ZA%29%2C_Table_Mountain_--_2024_--_2821.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Ciudad del Cabo. Table Mountain , Cape Town , Western Cape , South Africa",
+          "credit": "Dietmar Rabich",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:Cape Town (ZA), Table Mountain -- 2024 -- 2821.jpg"
+        }
+      ]
+    },
+    {
+      "id": "cataratas-victoria",
+      "name": "Cataratas Victoria",
+      "type": "natural",
+      "city": "Livingstone / Victoria Falls",
+      "country": "Zambia / Zimbabue",
+      "continent": "África",
+      "coords": {
+        "lat": -17.9243,
+        "lng": 25.8572
+      },
+      "languages": [
+        "Inglés",
+        "Chitonga",
+        "Isindebele",
+        "Chishona"
+      ],
+      "currency": {
+        "code": "ZMW / USD",
+        "name": "Kwacha zambiano (ZMW) en Zambia; en Zimbabue circulan sobre todo el dólar estadounidense y el ZiG"
+      },
+      "climate": "Subtropical con estación lluviosa (nov–mar) y seca (may–oct).",
+      "bestSeason": "Febrero–mayo para caudal alto; agosto–diciembre para vistas más despejadas del cañón.",
+      "description": "Conocidas en lozi como Mosi-oa-Tunya (“el humo que truena”), las cataratas forman una cortina de casi dos kilómetros sobre el Zambeze.",
+      "culture": "Lugar de valor espiritual y de encuentro regional; hoy es un destino binacional compartido.",
+      "traditions": "Relatos orales sobre el poder del río y ceremonias locales vinculadas al Zambeze.",
+      "gastronomy": "Pescado de río, sadza/nshima y cocina de lodges en Livingstone y Victoria Falls.",
+      "curiosities": [
+        "Son Patrimonio de la Humanidad desde 1989.",
+        "La niebla de los saltos puede verse a varios kilómetros en época de crecida."
+      ],
+      "tags": [
+        "catarata",
+        "unesco",
+        "rio",
+        "naturaleza"
+      ],
+      "featured": true,
+      "popularity": 86,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Victoria_falls%2C_zambia.jpg/1280px-Victoria_falls%2C_zambia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Cataratas Victoria. victoria falls",
+          "credit": "Someone35",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "file": "File:Victoria falls, zambia.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Cataratas_Victoria%2C_Zambia-Zimbabue%2C_2018-07-27%2C_DD_04.jpg/1280px-Cataratas_Victoria%2C_Zambia-Zimbabue%2C_2018-07-27%2C_DD_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Cataratas Victoria. Aerial view of the Victoria Falls of the Zambezi River , border between Zambia (left side) and Zimbabwe (right side). The Victoria Falls is the largest sheet of",
+          "credit": "Diego Delso",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:Cataratas Victoria, Zambia-Zimbabue, 2018-07-27, DD 04.jpg"
+        }
+      ]
+    },
+    {
+      "id": "serengeti",
+      "name": "Parque Nacional Serengeti",
+      "type": "natural",
+      "city": "Serengeti",
+      "country": "Tanzania",
+      "continent": "África",
+      "coords": {
+        "lat": -2.4361,
+        "lng": 34.8211,
+        "note": "Seronera, interior del parque"
+      },
+      "languages": [
+        "Suajili",
+        "Inglés"
+      ],
+      "currency": {
+        "code": "TZS",
+        "name": "Chelín tanzano"
+      },
+      "climate": "Sabana tropical con lluvias cortas (nov–dic) y largas (mar–may).",
+      "bestSeason": "Junio–octubre para migración; enero–febrero para temporada de cría en el sur.",
+      "description": "Una de las sabanas más emblemáticas del mundo y escenario de la gran migración de ñus y cebras.",
+      "culture": "Territorio histórico maasái; el nombre se asocia a la idea de una llanura sin fin.",
+      "traditions": "Conocimiento pastoral del paisaje y convivencia histórica con la fauna migratoria.",
+      "gastronomy": "Cocina tanzana de safari: chapati, ugali y propuestas contemporáneas en lodges.",
+      "curiosities": [
+        "Integra el conjunto Serengeti-Ngorongoro, Patrimonio de la Humanidad.",
+        "La migración involucra cerca de 1,5 millones de ñus cada año."
+      ],
+      "tags": [
+        "safari",
+        "fauna",
+        "unesco",
+        "sabana"
+      ],
+      "featured": false,
+      "popularity": 84,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Wildebeest_Migration_in_Serengeti_National_Park%2C_Tanzania.jpg/1280px-Wildebeest_Migration_in_Serengeti_National_Park%2C_Tanzania.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Parque Nacional Serengeti. Wildebeest Migration in Serengeti National Park, Tanzania. Each year, enormous herds of wildebeest and zebra move thousands of kilometres across the Sere",
+          "credit": "Daniel Rosengren",
+          "source": "Wikimedia Commons",
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+          "file": "File:Wildebeest Migration in Serengeti National Park, Tanzania.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Serengeti_wildebeest_migration_JF.jpg/1280px-Serengeti_wildebeest_migration_JF.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Parque Nacional Serengeti. The wildebeest are crossing a small part of the Grumeti River in the western corridor in Serengeti. Experience the great wildebeest migration in the impr",
+          "credit": "Wolves201",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:Serengeti wildebeest migration JF.jpg"
+        }
+      ]
+    },
+    {
+      "id": "luxor",
+      "name": "Luxor",
+      "type": "historico",
+      "city": "Luxor",
+      "country": "Egipto",
+      "continent": "África",
+      "coords": {
+        "lat": 25.6872,
+        "lng": 32.6396
+      },
+      "languages": [
+        "Árabe",
+        "Inglés"
+      ],
+      "currency": {
+        "code": "EGP",
+        "name": "Libra egipcia"
+      },
+      "climate": "Desértico cálido, con casi nula precipitación anual.",
+      "bestSeason": "Octubre–abril, cuando el calor permite recorrer templos y tumbas con más comodidad.",
+      "description": "Sobre la antigua Tebas, Luxor reúne los templos de Karnak y Luxor y, en la orilla oeste, el Valle de los Reyes.",
+      "culture": "Centro religioso del Egipto faraónico y eje patrimonial del Alto Egipto.",
+      "traditions": "Visitas a necrópolis y templos, y vida cotidiana marcada por el ritmo del Nilo.",
+      "gastronomy": "Koshari, ful medames, taameya y pescados del Nilo.",
+      "curiosities": [
+        "Una avenida de esfinges conectaba históricamente Luxor y Karnak.",
+        "La tumba de Tutankamón fue hallada en 1922 en el Valle de los Reyes."
+      ],
+      "tags": [
+        "egipto",
+        "templos",
+        "unesco",
+        "nilo"
+      ],
+      "featured": false,
+      "popularity": 87,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Luxor_Temple_R04.jpg/1280px-Luxor_Temple_R04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Luxor. Luxor Temple of (Egypt)",
+          "credit": "Marc Ryckaert",
+          "source": "Wikimedia Commons",
+          "license": "CC BY 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+          "file": "File:Luxor Temple R04.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Pylons_and_obelisk_Luxor_temple.JPG/1280px-Pylons_and_obelisk_Luxor_temple.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Luxor. Pylons and obelisk at Luxor temple .",
+          "credit": "Ad Meskens",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "file": "File:Pylons and obelisk Luxor temple.JPG"
+        }
+      ]
+    },
+    {
+      "id": "machu-picchu",
+      "name": "Machu Picchu",
+      "type": "historico",
+      "city": "Aguas Calientes",
+      "country": "Perú",
+      "continent": "América",
+      "coords": {
+        "lat": -13.1631,
+        "lng": -72.545
+      },
+      "languages": [
+        "Español",
+        "Quechua"
+      ],
+      "currency": {
+        "code": "PEN",
+        "name": "Sol peruano"
+      },
+      "climate": "Subtropical de montaña: estación seca (may–sep) y lluviosa (nov–mar).",
+      "bestSeason": "Mayo–septiembre, con menor lluvia y mejores vistas.",
+      "description": "Ciudadela inca del siglo XV en los Andes, Patrimonio de la Humanidad y uno de los hitos arqueológicos de América.",
+      "culture": "Expresión de la ingeniería y cosmovisión andina; símbolo cultural del Perú contemporáneo.",
+      "traditions": "Ofrendas a la Pachamama e Inti Raymi en el Cusco cercano.",
+      "gastronomy": "Cocina cusqueña de altura: papas nativas, choclo, trucha y mate de coca.",
+      "curiosities": [
+        "Se encuentra a unos 2.430 m s. n. m.",
+        "El acceso se regula con cupos diarios para preservar el sitio."
+      ],
+      "tags": [
+        "inca",
+        "andes",
+        "unesco",
+        "arqueologia"
+      ],
+      "featured": true,
+      "popularity": 95,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Machu_picchu_grande.jpg/1280px-Machu_picchu_grande.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Machu Picchu. Photo of Machu Picchu (Cusco, Perú)",
+          "credit": "Thomas Quine",
+          "source": "Wikimedia Commons",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "file": "File:Machu picchu grande.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Machu-picchu-c12.jpg/1280px-Machu-picchu-c12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Machu Picchu. Machu Picchu , Perú . Inca Palace at Residential area.",
+          "credit": "Colegota",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 2.5 es",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5/es/deed.en",
+          "file": "File:Machu-picchu-c12.jpg"
+        }
+      ]
+    },
+    {
+      "id": "iguazu",
+      "name": "Cataratas del Iguazú",
+      "type": "natural",
+      "city": "Puerto Iguazú / Foz do Iguaçu",
+      "country": "Argentina / Brasil",
+      "continent": "América",
+      "coords": {
+        "lat": -25.6953,
+        "lng": -54.4367
+      },
+      "languages": [
+        "Español",
+        "Portugués"
+      ],
+      "currency": {
+        "code": "ARS / BRL",
+        "name": "Peso argentino / Real brasileño"
+      },
+      "climate": "Subtropical húmedo, con lluvias frecuentes todo el año.",
+      "bestSeason": "Marzo–mayo y agosto–octubre, con buen caudal y clima agradable.",
+      "description": "Conjunto de saltos sobre el río Iguazú, protegido por parques nacionales en Argentina y Brasil.",
+      "culture": "Territorio ancestral guaraní; el topónimo se asocia a la idea de “agua grande”.",
+      "traditions": "Relatos guaraníes sobre el origen de los saltos e identidad cultural de frontera.",
+      "gastronomy": "Pescados de río, chipá, mandioca y cocina misionera/paranaense.",
+      "curiosities": [
+        "La Garganta del Diablo es el salto más imponente del sistema.",
+        "Ambos parques nacionales son Patrimonio de la Humanidad."
+      ],
+      "tags": [
+        "catarata",
+        "selva",
+        "unesco",
+        "frontera"
+      ],
+      "featured": true,
+      "popularity": 91,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/00_1838_Iguazu_Falls_from_the_Brazilian_side.jpg/1280px-00_1838_Iguazu_Falls_from_the_Brazilian_side.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Cataratas del Iguazú. Iguazú-Wasserfälle: insgesamt 20 größeren sowie 255 kleinere Wasserfälle auf einer Ausdehnung von 2,7 Kilometern. Aufnahme von der Brasilianische Seite bei Ho",
+          "credit": "W. Bulach",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:00 1838 Iguazu Falls from the Brazilian side.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Rainbows_at_Iguazu_Falls_frrom_Argentina.jpg/1280px-Rainbows_at_Iguazu_Falls_frrom_Argentina.jpg",
+          "alt": "Cataratas del Iguazú vistas desde Argentina, con arcoíris.",
+          "credit": "Pierre André Leclercq",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:Rainbows at Iguazu Falls frrom Argentina.jpg"
+        }
+      ]
+    },
+    {
+      "id": "patagonia-chalten",
+      "name": "El Chaltén",
+      "type": "montana",
+      "city": "El Chaltén",
+      "country": "Argentina",
+      "continent": "América",
+      "coords": {
+        "lat": -49.3315,
+        "lng": -72.8865
+      },
+      "languages": [
+        "Español"
+      ],
+      "currency": {
+        "code": "ARS",
+        "name": "Peso argentino"
+      },
+      "climate": "Patagónico de montaña: vientos fuertes, veranos frescos e inviernos fríos.",
+      "bestSeason": "Noviembre–marzo para trekking; el clima sigue siendo variable todo el año.",
+      "description": "Capital nacional del trekking en Argentina, a los pies del Fitz Roy dentro del Parque Nacional Los Glaciares.",
+      "culture": "Pueblo joven nacido en 1985, orientado al montañismo y a la vida al aire libre.",
+      "traditions": "Cultura de refugios, senderismo y respeto por áreas protegidas.",
+      "gastronomy": "Cerveza artesanal, cordero patagónico y cocina de montaña.",
+      "curiosities": [
+        "El Chaltén es una de las puertas de acceso al Fitz Roy y al Cerro Torre.",
+        "El Parque Nacional Los Glaciares es Patrimonio de la Humanidad."
+      ],
+      "tags": [
+        "trekking",
+        "patagonia",
+        "glaciares",
+        "montana"
+      ],
+      "featured": false,
+      "popularity": 82,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Fitz_Roy_1.jpg/1280px-Fitz_Roy_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "El Chaltén. Monts Fitz Roy",
+          "credit": "Prissantenbär",
+          "source": "Wikimedia Commons",
+          "license": "Public domain",
+          "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+          "file": "File:Fitz Roy 1.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Fitz_Roy_framed_trees_%28colour_balans%29.jpg/1280px-Fitz_Roy_framed_trees_%28colour_balans%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "El Chaltén. Fitz Roy mountain, El Chalten, Argentina",
+          "credit": "Jenny Mealing (colour balans adjusted by Lycaon )",
+          "source": "Wikimedia Commons",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "file": "File:Fitz Roy framed trees (colour balans).jpg"
+        }
+      ]
+    },
+    {
+      "id": "nueva-york",
+      "name": "Nueva York",
+      "type": "ciudad",
+      "city": "Nueva York",
+      "country": "Estados Unidos",
+      "continent": "América",
+      "coords": {
+        "lat": 40.7128,
+        "lng": -74.006
+      },
+      "languages": [
+        "Inglés"
+      ],
+      "currency": {
+        "code": "USD",
+        "name": "Dólar estadounidense"
+      },
+      "climate": "Continental húmedo: veranos cálidos, inviernos fríos y cuatro estaciones marcadas.",
+      "bestSeason": "Abril–junio y septiembre–noviembre, con clima templado para recorrer la ciudad.",
+      "description": "Metrópoli global organizada en boroughs, con íconos como Manhattan, Central Park y el puerto de la Estatua de la Libertad.",
+      "culture": "Diversidad migratoria, escena artística, financiera y mediática de escala mundial.",
+      "traditions": "Desfiles como el de Acción de Gracias, Broadway y una intensa vida de barrios.",
+      "gastronomy": "Desde bagels y pizza al corte hasta cocinas de casi todas las regiones del mundo.",
+      "curiosities": [
+        "Central Park abarca unas 341 hectáreas en el corazón de Manhattan.",
+        "La Estatua de la Libertad fue un regalo de Francia inaugurado en 1886."
+      ],
+      "tags": [
+        "metropolis",
+        "arquitectura",
+        "cultura",
+        "atlantico"
+      ],
+      "featured": true,
+      "popularity": 94,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg/1280px-New_York_Midtown_Skyline_at_night_-_Jan_2006_edit1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Nueva York. A 20 segment panoramic image of the New York Midtown skyline as viewed from the Empire State Building at night (looking North). Taken with a Canon 5D and 85mm f/1.8 len",
+          "credit": "Diliff",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "file": "File:New York Midtown Skyline at night - Jan 2006 edit1.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Manhattan_from_Weehawken%2C_NJ.jpg/1280px-Manhattan_from_Weehawken%2C_NJ.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Nueva York. Midtown Manhattan as seen from Weehawken, NJ",
+          "credit": "Dmitry Avdeev",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "file": "File:Manhattan from Weehawken, NJ.jpg"
+        }
+      ]
+    },
+    {
+      "id": "la-habana",
+      "name": "La Habana",
+      "type": "cultural",
+      "city": "La Habana",
+      "country": "Cuba",
+      "continent": "América",
+      "coords": {
+        "lat": 23.1136,
+        "lng": -82.3666
+      },
+      "languages": [
+        "Español"
+      ],
+      "currency": {
+        "code": "CUP",
+        "name": "Peso cubano"
+      },
+      "climate": "Tropical, con estación lluviosa (may–oct) y seca (nov–abr).",
+      "bestSeason": "Diciembre–abril, más seco y agradable para caminar el centro histórico.",
+      "description": "Capital caribeña de trazado colonial, malecón y una vida musical que define buena parte de su identidad.",
+      "culture": "Fusión de raíces españolas, africanas y caribeñas; La Habana Vieja es Patrimonio de la Humanidad.",
+      "traditions": "Son, salsa, rumba y encuentros en plazas y casas de la música.",
+      "gastronomy": "Ropa vieja, congrí, tostones, mojito y café cubano.",
+      "curiosities": [
+        "El Malecón se extiende varios kilómetros frente al Estrecho de la Florida.",
+        "Autos clásicos de mediados del siglo XX siguen circulando como parte del paisaje urbano."
+      ],
+      "tags": [
+        "caribe",
+        "colonial",
+        "musica",
+        "unesco"
+      ],
+      "featured": false,
+      "popularity": 85,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Habana_Vieja_-_old_street.JPG/1280px-Habana_Vieja_-_old_street.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "La Habana. Street in Old Havana",
+          "credit": "Escla",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "file": "File:Habana Vieja - old street.JPG"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Habana_Vieja_de_noche.jpg/1280px-Habana_Vieja_de_noche.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "La Habana. Old Havana by night",
+          "credit": "Gabriel Rodríguez",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "file": "File:Habana Vieja de noche.jpg"
+        }
+      ]
+    },
+    {
+      "id": "banff",
+      "name": "Banff",
+      "type": "natural",
+      "city": "Banff",
+      "country": "Canadá",
+      "continent": "América",
+      "coords": {
+        "lat": 51.1784,
+        "lng": -115.5708
+      },
+      "languages": [
+        "Inglés",
+        "Francés"
+      ],
+      "currency": {
+        "code": "CAD",
+        "name": "Dólar canadiense"
+      },
+      "climate": "De montaña: inviernos largos y fríos, veranos frescos.",
+      "bestSeason": "Junio–septiembre para lagos y senderos; diciembre–marzo para deportes de invierno.",
+      "description": "Pueblo y parque nacional en las Montañas Rocosas canadienses, con lagos glaciares y fauna alpina.",
+      "culture": "Turismo de naturaleza en territorio tradicional de pueblos indígenas de las Rocosas.",
+      "traditions": "Cultura de parques nacionales, senderismo y observación responsable de fauna.",
+      "gastronomy": "Cocina de montaña, productos locales de Alberta y propuestas de lodges.",
+      "curiosities": [
+        "Banff fue el primer parque nacional de Canadá (1885).",
+        "El Lago Louise es uno de los paisajes más fotografiados del país."
+      ],
+      "tags": [
+        "rocosas",
+        "lagos",
+        "parque-nacional",
+        "canada"
+      ],
+      "featured": false,
+      "popularity": 83,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Moraine_Lake_17092005.jpg/1280px-Moraine_Lake_17092005.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Banff. Valley of the Ten Peaks and Moraine Lake, Banff National Park, Canada. Mountains from left to right: Tonsa (3057 m), Mount Perren (3051 m), Mount Allen (3310 m), Mount Tuzo ",
+          "credit": "Gorgo",
+          "source": "Wikimedia Commons",
+          "license": "Public domain",
+          "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+          "file": "File:Moraine Lake 17092005.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Lake_Louise_03.jpg/1280px-Lake_Louise_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Banff. Lake Louise 03",
+          "credit": "Thomas Fuhrmann",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:Lake Louise 03.jpg"
+        }
+      ]
+    },
+    {
+      "id": "cartagena",
+      "name": "Cartagena de Indias",
+      "type": "ciudad",
+      "city": "Cartagena",
+      "country": "Colombia",
+      "continent": "América",
+      "coords": {
+        "lat": 10.391,
+        "lng": -75.4794
+      },
+      "languages": [
+        "Español"
+      ],
+      "currency": {
+        "code": "COP",
+        "name": "Peso colombiano"
+      },
+      "climate": "Tropical cálido y húmedo durante casi todo el año.",
+      "bestSeason": "Diciembre–abril, con menor lluvia para recorrer la ciudad amurallada.",
+      "description": "Puerto caribeño de murallas coloniales, plazas sombreadas e islas cercanas en el mar Caribe.",
+      "culture": "Ciudad histórica fortificada, Patrimonio de la Humanidad, con fuerte herencia afrocaribeña.",
+      "traditions": "Festivales de música, artesanía en las murallas y vida nocturna en el centro histórico.",
+      "gastronomy": "Ceviche, arepa de huevo, mote de queso y cocinas costeñas del Caribe colombiano.",
+      "curiosities": [
+        "Sus fortificaciones fueron clave en la defensa del Imperio español en el Caribe.",
+        "El centro histórico conserva trazado y casonas coloniales restauradas."
+      ],
+      "tags": [
+        "caribe",
+        "colonial",
+        "murallas",
+        "unesco"
+      ],
+      "featured": false,
+      "popularity": 84,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Murallas_de_Cartagena_de_Indias_2014-08-22_1.JPG/1280px-Murallas_de_Cartagena_de_Indias_2014-08-22_1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Cartagena de Indias. This is a photo of a Colombian monument with location ID",
+          "credit": "Samael Alejandro Zapata Ibarra",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "file": "File:Murallas de Cartagena de Indias 2014-08-22 1.JPG"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Torre_del_reloj%2C_Cartagena_de_Indias_-_Colombia.JPG/1280px-Torre_del_reloj%2C_Cartagena_de_Indias_-_Colombia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Cartagena de Indias. Torre del reloj, Cartagena de Indias - Colombia",
+          "credit": "Pepecartagena",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "file": "File:Torre del reloj, Cartagena de Indias - Colombia.JPG"
+        }
+      ]
+    },
+    {
+      "id": "cusco",
+      "name": "Cusco",
+      "type": "cultural",
+      "city": "Cusco",
+      "country": "Perú",
+      "continent": "América",
+      "coords": {
+        "lat": -13.5319,
+        "lng": -71.9675
+      },
+      "languages": [
+        "Español",
+        "Quechua"
+      ],
+      "currency": {
+        "code": "PEN",
+        "name": "Sol peruano"
+      },
+      "climate": "De altura: días templados y noches frías; estación seca may–sep.",
+      "bestSeason": "Mayo–septiembre para cielos despejados y festividades andinas.",
+      "description": "Antigua capital del Tahuantinsuyo, a unos 3.400 m s. n. m., con trazado inca y arquitectura colonial superpuesta.",
+      "culture": "Centro vivo de la cultura andina y puerta de entrada al Valle Sagrado y Machu Picchu.",
+      "traditions": "Inti Raymi, Corpus Christi cusqueño y ferias textiles.",
+      "gastronomy": "Cuy, chiriuchu, pan chapla y cacao/chocolate de origen peruano.",
+      "curiosities": [
+        "Muchas calles conservan muros de piedra inca como base de edificios posteriores.",
+        "El Qorikancha fue uno de los templos más importantes del imperio inca."
+      ],
+      "tags": [
+        "andes",
+        "inca",
+        "altura",
+        "unesco"
+      ],
+      "featured": false,
+      "popularity": 89,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Catedral%2C_Plaza_de_Armas%2C_Cusco%2C_Per%C3%BA%2C_2015-07-31%2C_DD_57.JPG/1280px-Catedral%2C_Plaza_de_Armas%2C_Cusco%2C_Per%C3%BA%2C_2015-07-31%2C_DD_57.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Cusco. Cathedral, Plaza de Armas, Cusco, Peru",
+          "credit": "Diego Delso",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:Catedral, Plaza de Armas, Cusco, Perú, 2015-07-31, DD 57.JPG"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Sacsayhuam%C3%A1n%2C_Cusco%2C_Per%C3%BA%2C_2015-07-31%2C_DD_02.JPG/1280px-Sacsayhuam%C3%A1n%2C_Cusco%2C_Per%C3%BA%2C_2015-07-31%2C_DD_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Cusco. Sacsayhuamán, Cusco, Perú, 2015-07-31, DD 02",
+          "credit": "Diego Delso",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:Sacsayhuamán, Cusco, Perú, 2015-07-31, DD 02.JPG"
+        }
+      ]
+    },
+    {
+      "id": "ciudad-de-mexico",
+      "name": "Ciudad de México",
+      "type": "ciudad",
+      "city": "Ciudad de México",
+      "country": "México",
+      "continent": "América",
+      "coords": {
+        "lat": 19.4326,
+        "lng": -99.1332
+      },
+      "languages": [
+        "Español"
+      ],
+      "currency": {
+        "code": "MXN",
+        "name": "Peso mexicano"
+      },
+      "climate": "Templado de altitud, con temporada de lluvias en verano.",
+      "bestSeason": "Marzo–mayo y noviembre–febrero, fuera del pico más intenso de lluvias.",
+      "description": "Una de las mayores metrópolis de América, erigida sobre el legado de Tenochtitlán, con museos, barrios y cocina de referencia mundial.",
+      "culture": "Cruce de herencia prehispánica, colonial y contemporánea; el Centro Histórico es Patrimonio de la Humanidad.",
+      "traditions": "Día de Muertos, ferias de barrios y una intensa agenda de arte y música.",
+      "gastronomy": "Tacos, mole, antojitos de mercado y una escena de alta cocina reconocida internacionalmente.",
+      "curiosities": [
+        "El Zócalo se asienta sobre el antiguo recinto sagrado mexica.",
+        "El Museo Nacional de Antropología alberga piezas clave del México antiguo."
+      ],
+      "tags": [
+        "metropolis",
+        "museos",
+        "gastronomia",
+        "patrimonio"
+      ],
+      "featured": false,
+      "popularity": 90,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Mexico_City_Palacio_de_bellas_artes.jpg/1280px-Mexico_City_Palacio_de_bellas_artes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Ciudad de México. Mexico City - Palace of fine arts seen from top of Torre Latinoamericana",
+          "credit": "Jeses",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 2.5",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+          "file": "File:Mexico City Palacio de bellas artes.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Palacio_de_Bellas_Artes%2C_M%C3%A9xico_D.F.%2C_M%C3%A9xico%2C_2014-10-13%2C_DD_37.JPG/1280px-Palacio_de_Bellas_Artes%2C_M%C3%A9xico_D.F.%2C_M%C3%A9xico%2C_2014-10-13%2C_DD_37.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Ciudad de México. Fine Arts Palace, Mexico City, Mexico",
+          "credit": "Diego Delso",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "file": "File:Palacio de Bellas Artes, México D.F., México, 2014-10-13, DD 37.JPG"
+        }
+      ]
+    },
+    {
+      "id": "kyoto",
+      "name": "Kioto",
+      "type": "cultural",
+      "city": "Kioto",
+      "country": "Japón",
+      "continent": "Asia",
+      "coords": {
+        "lat": 35.0116,
+        "lng": 135.7681
+      },
+      "languages": [
+        "Japonés"
+      ],
+      "currency": {
+        "code": "JPY",
+        "name": "Yen japonés"
+      },
+      "climate": "Continental húmedo: veranos cálidos y húmedos, inviernos fríos.",
+      "bestSeason": "Finales de marzo–abril (sakura) y noviembre (momiji).",
+      "description": "Antigua capital imperial, con templos, santuarios, barrios de madera y jardines que sintetizan la estética japonesa.",
+      "culture": "Cuna de tradiciones como la ceremonia del té, el teatro nō y la artesanía de kioto.",
+      "traditions": "Gion Matsuri, paseos por Philosophers’ Path y visitas a templos zen.",
+      "gastronomy": "Kaiseki, yudofu, matcha y dulces tradicionales de té.",
+      "curiosities": [
+        "Fue capital de Japón durante más de mil años.",
+        "Varios conjuntos de templos y santuarios están inscritos por la UNESCO."
+      ],
+      "tags": [
+        "templos",
+        "jardin",
+        "tradicion",
+        "unesco"
+      ],
+      "featured": true,
+      "popularity": 93,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Kiyomizu-dera%2C_Kyoto%2C_November_2016_-01.jpg/1280px-Kiyomizu-dera%2C_Kyoto%2C_November_2016_-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Kioto. Kiyomizu-dera , Kyoto , Japan , part of UNESCO World Heritage Site Ref. Number 688 .",
+          "credit": "Martin Falbisoner",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:Kiyomizu-dera, Kyoto, November 2016 -01.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/KyotoFushimiInariLarge.jpg/1280px-KyotoFushimiInariLarge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Kioto. KyotoFushimiInariLarge",
+          "credit": "Paul Vlaar",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+          "file": "File:KyotoFushimiInariLarge.jpg"
+        }
+      ]
+    },
+    {
+      "id": "petra",
+      "name": "Petra",
+      "type": "historico",
+      "city": "Wadi Musa",
+      "country": "Jordania",
+      "continent": "Asia",
+      "coords": {
+        "lat": 30.3285,
+        "lng": 35.4444
+      },
+      "languages": [
+        "Árabe",
+        "Inglés"
+      ],
+      "currency": {
+        "code": "JOD",
+        "name": "Dinar jordano"
+      },
+      "climate": "Desértico árido, con días calurosos y noches frescas.",
+      "bestSeason": "Marzo–mayo y septiembre–noviembre, evitando el calor extremo del verano.",
+      "description": "Ciudad nabatea excavada en roca rosada, accesible por el Siq y coronada por monumentos como Al-Khazneh (el Tesoro).",
+      "culture": "Capital del reino nabateo y cruce de rutas caravaneras entre Arabia, Egipto y el Mediterráneo.",
+      "traditions": "Hospitalidad beduina en el entorno de Wadi Musa y visitas nocturnas iluminadas al sitio.",
+      "gastronomy": "Mansaf, falafel, hummus y té beduino de la zona.",
+      "curiosities": [
+        "Es una de las Nuevas Siete Maravillas del Mundo moderno.",
+        "El Siq, el desfiladero de acceso, se extiende alrededor de 1,2 km."
+      ],
+      "tags": [
+        "nabateo",
+        "desierto",
+        "unesco",
+        "arqueologia"
+      ],
+      "featured": true,
+      "popularity": 92,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Petra_Deir_44.jpg/1280px-Petra_Deir_44.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Petra. Petra Deir 44",
+          "credit": "Teogomez Teo Gomez",
+          "source": "Wikimedia Commons",
+          "license": "Public domain",
+          "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+          "file": "File:Petra Deir 44.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Petra_%2C_Al-Khazneh_2.jpg/1280px-Petra_%2C_Al-Khazneh_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Petra. Petra , Al-Khazneh 2",
+          "credit": "Faraheed",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "file": "File:Petra , Al-Khazneh 2.jpg"
+        }
+      ]
+    },
+    {
+      "id": "angkor",
+      "name": "Angkor",
+      "type": "historico",
+      "city": "Siem Reap",
+      "country": "Camboya",
+      "continent": "Asia",
+      "coords": {
+        "lat": 13.4125,
+        "lng": 103.867
+      },
+      "languages": [
+        "Jemer",
+        "Inglés"
+      ],
+      "currency": {
+        "code": "KHR / USD",
+        "name": "Riel camboyano / Dólar estadounidense"
+      },
+      "climate": "Tropical monzónico, con estación seca y lluviosa bien marcadas.",
+      "bestSeason": "Noviembre–febrero, más fresco y seco para recorrer los templos.",
+      "description": "Complejo arqueológico del Imperio jemer, con Angkor Wat como templo-montaña más célebre.",
+      "culture": "Expresión del hinduismo y budismo jemeres en arquitectura monumental.",
+      "traditions": "Amaneceres en Angkor Wat y danza apsara como patrimonio performático.",
+      "gastronomy": "Amok, lok lak, sopas de fideos y cocina de mercado de Siem Reap.",
+      "curiosities": [
+        "Angkor Wat aparece en la bandera de Camboya.",
+        "El parque arqueológico es Patrimonio de la Humanidad."
+      ],
+      "tags": [
+        "templo",
+        "jemer",
+        "unesco",
+        "selva"
+      ],
+      "featured": false,
+      "popularity": 90,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Angkor_Wat%2C_Camboya%2C_2013-08-15%2C_DD_014.JPG/1280px-Angkor_Wat%2C_Camboya%2C_2013-08-15%2C_DD_014.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Angkor. Angkor Wat, Cambodia",
+          "credit": "Diego Delso",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "file": "File:Angkor Wat, Camboya, 2013-08-15, DD 014.JPG"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Angkor_Wat%2C_Camboya%2C_2013-08-15%2C_DD_022.JPG/1280px-Angkor_Wat%2C_Camboya%2C_2013-08-15%2C_DD_022.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Angkor. Angkor Wat, Cambodia",
+          "credit": "Diego Delso",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "file": "File:Angkor Wat, Camboya, 2013-08-15, DD 022.JPG"
+        }
+      ]
+    },
+    {
+      "id": "ubud-bali",
+      "name": "Ubud",
+      "type": "cultural",
+      "city": "Ubud",
+      "country": "Indonesia",
+      "continent": "Asia",
+      "coords": {
+        "lat": -8.5069,
+        "lng": 115.2625
+      },
+      "languages": [
+        "Indonesio",
+        "Balinés",
+        "Inglés"
+      ],
+      "currency": {
+        "code": "IDR",
+        "name": "Rupia indonesia"
+      },
+      "climate": "Tropical húmedo; la estación seca suele ir de abril a octubre.",
+      "bestSeason": "Abril–octubre para trekking en arrozales y menos lluvia intensa.",
+      "description": "Corazón cultural de Bali, rodeado de terrazas de arroz, templos y talleres de artesanía.",
+      "culture": "Hinduismo balinés, ofrendas diarias y una fuerte tradición artística.",
+      "traditions": "Ceremonias en templos, danza kecak y ofrendas canang sari.",
+      "gastronomy": "Babi guling, sate lilit, babi genyol y café luwak de la región (con matices éticos).",
+      "curiosities": [
+        "El paisaje cultural de Bali, incluido el sistema subak, es Patrimonio de la Humanidad.",
+        "Ubud creció como centro de arte y espiritualidad frente al turismo de costa."
+      ],
+      "tags": [
+        "bali",
+        "arrozales",
+        "templos",
+        "artesania"
+      ],
+      "featured": false,
+      "popularity": 88,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Tegallalang_Rice_Terraces.jpg/1280px-Tegallalang_Rice_Terraces.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Ubud. Tegallalang Rice Terraces in Bali, Indonesia",
+          "credit": "EverettSlane",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:Tegallalang Rice Terraces.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Rice_terraces_in_Tegallalang_1.jpg/1280px-Rice_terraces_in_Tegallalang_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Ubud. Rice terraces in Tegallalang.",
+          "credit": "Christophe95",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:Rice terraces in Tegallalang 1.jpg"
+        }
+      ]
+    },
+    {
+      "id": "estambul",
+      "name": "Estambul",
+      "type": "ciudad",
+      "city": "Estambul",
+      "country": "Turquía",
+      "continent": "Europa",
+      "coords": {
+        "lat": 41.0082,
+        "lng": 28.9784
+      },
+      "languages": [
+        "Turco"
+      ],
+      "currency": {
+        "code": "TRY",
+        "name": "Lira turca"
+      },
+      "climate": "Transición entre mediterráneo y continental: inviernos húmedos y veranos cálidos.",
+      "bestSeason": "Abril–junio y septiembre–octubre, templados para caminar la ciudad.",
+      "description": "Metrópoli entre Europa y Asia. El centro histórico —Santa Sofía, la Mezquita Azul y el Gran Bazar— está en la orilla europea del Bósforo; la ciudad también se extiende por la orilla asiática.",
+      "culture": "Herencia bizantina y otomana; Santa Sofía, la Mezquita Azul y el Gran Bazar condensan siglos de historia.",
+      "traditions": "Cultura del çay, hamams y paseos en ferry por el Bósforo.",
+      "gastronomy": "Kebab, meze, baklava, simit y pescado fresco del estrecho.",
+      "curiosities": [
+        "Es la única gran ciudad situada en dos continentes.",
+        "El casco histórico de la península está inscrito por la UNESCO."
+      ],
+      "tags": [
+        "bosforo",
+        "otomano",
+        "bazar",
+        "unesco"
+      ],
+      "featured": true,
+      "popularity": 92,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Exterior_of_Sultan_Ahmed_I_Mosque_in_Istanbul%2C_Turkey_001.JPG/1280px-Exterior_of_Sultan_Ahmed_I_Mosque_in_Istanbul%2C_Turkey_001.JPG",
+          "alt": "Estambul. Exterior de la Mezquita de Sultan Ahmed (Mezquita Azul).",
+          "credit": "Moonik",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "file": "File:Exterior of Sultan Ahmed I Mosque in Istanbul, Turkey 001.JPG"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Hagia_Sophia_-_coupole.jpg/1280px-Hagia_Sophia_-_coupole.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Estambul. The cupola of Hagia Sophia , in Istanbul.",
+          "credit": "Eusebius",
+          "source": "Wikimedia Commons",
+          "license": "CC BY 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+          "file": "File:Hagia Sophia - coupole.jpg"
+        }
+      ]
+    },
+    {
+      "id": "tokio",
+      "name": "Tokio",
+      "type": "ciudad",
+      "city": "Tokio",
+      "country": "Japón",
+      "continent": "Asia",
+      "coords": {
+        "lat": 35.6762,
+        "lng": 139.6503
+      },
+      "languages": [
+        "Japonés"
+      ],
+      "currency": {
+        "code": "JPY",
+        "name": "Yen japonés"
+      },
+      "climate": "Húmedo subtropical: veranos calurosos, inviernos frescos y estación de lluvias (tsuyu).",
+      "bestSeason": "Marzo–abril y octubre–noviembre, con clima más suave.",
+      "description": "Capital japonesa de barrios contrastantes: santuarios, rascacielos, callejones de comida y parques urbanos.",
+      "culture": "Modernidad tecnológica conviviendo con tradiciones shinto-budistas y una escena pop global.",
+      "traditions": "Hanami en primavera, matsuri de barrio y etiqueta cotidiana muy codificada.",
+      "gastronomy": "Sushi, ramen, tempura, izakayas y una de las mayores densidades de restaurantes del mundo.",
+      "curiosities": [
+        "El cruce de Shibuya es uno de los pasos peatonales más transitados del planeta.",
+        "Tokio agrupa 23 distritos especiales en su núcleo metropolitano."
+      ],
+      "tags": [
+        "metropolis",
+        "tecnologia",
+        "gastronomia",
+        "cultura-pop"
+      ],
+      "featured": false,
+      "popularity": 94,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Shibuya_Crossing%2C_Tokyo%2C_Japan_%286790070270%29.jpg/1280px-Shibuya_Crossing%2C_Tokyo%2C_Japan_%286790070270%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Tokio. Shibuya Crossing, Tokyo, Japan",
+          "credit": "yeowatzup",
+          "source": "Wikimedia Commons",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "file": "File:Shibuya Crossing, Tokyo, Japan (6790070270).jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/H%C5%8Dz%C5%8Dmon%2C_Sens%C5%8D-ji_%2820230804151417%29.jpg/1280px-H%C5%8Dz%C5%8Dmon%2C_Sens%C5%8D-ji_%2820230804151417%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Tokio. Hōzōmon, Sensō-ji (20230804151417)",
+          "credit": "N509FZ",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:Hōzōmon, Sensō-ji (20230804151417).jpg"
+        }
+      ]
+    },
+    {
+      "id": "jaipur",
+      "name": "Jaipur",
+      "type": "arquitectonico",
+      "city": "Jaipur",
+      "country": "India",
+      "continent": "Asia",
+      "coords": {
+        "lat": 26.9124,
+        "lng": 75.7873
+      },
+      "languages": [
+        "Hindi",
+        "Inglés"
+      ],
+      "currency": {
+        "code": "INR",
+        "name": "Rupia india"
+      },
+      "climate": "Semiárido: veranos muy calurosos, monzón irregular e inviernos agradables.",
+      "bestSeason": "Noviembre–febrero, con temperaturas más suaves para visitar fuertes y bazares.",
+      "description": "La “ciudad rosa” de Rajastán, planificada en el siglo XVIII, con palacios, observatorios y el fuerte Amber.",
+      "culture": "Herencia rajput visible en arquitectura, artesanía textil y joyería.",
+      "traditions": "Festivales como Teeja y un calendario de ferias artesanales.",
+      "gastronomy": "Dal baati churma, laal maas y dulces como ghevar.",
+      "curiosities": [
+        "Forma parte del conjunto “Hill Forts of Rajasthan” relacionado con el fuerte Amber (UNESCO).",
+        "El Observatorio Jantar Mantar de Jaipur es Patrimonio de la Humanidad."
+      ],
+      "tags": [
+        "rajastan",
+        "palacios",
+        "fuertes",
+        "unesco"
+      ],
+      "featured": false,
+      "popularity": 86,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Hawa_Mahal_2011.jpg/1280px-Hawa_Mahal_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Jaipur. Hawa Mahal, Jaipur, India.",
+          "credit": "Marcin Białek",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:Hawa Mahal 2011.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Hawa_Mahal%2C_Jaipur_%2836473101354%29.jpg/1280px-Hawa_Mahal%2C_Jaipur_%2836473101354%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Jaipur. Hawa Mahal, Jaipur",
+          "credit": "Aleksandr Zykov from Russia",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "file": "File:Hawa Mahal, Jaipur (36473101354).jpg"
+        }
+      ]
+    },
+    {
+      "id": "paris",
+      "name": "París",
+      "type": "ciudad",
+      "city": "París",
+      "country": "Francia",
+      "continent": "Europa",
+      "coords": {
+        "lat": 48.8566,
+        "lng": 2.3522
+      },
+      "languages": [
+        "Francés"
+      ],
+      "currency": {
+        "code": "EUR",
+        "name": "Euro"
+      },
+      "climate": "Oceánico templado, con lluvias repartidas y veranos moderados.",
+      "bestSeason": "Abril–junio y septiembre–octubre para pasear con clima agradable.",
+      "description": "Capital francesa de boulevards, museos y arquitectura que va de la Île de la Cité a los grandes ejes haussmannianos.",
+      "culture": "Referente histórico de arte, filosofía y gastronomía; orillas del Sena son Patrimonio de la Humanidad.",
+      "traditions": "Café en terraza, visitas a mercados y un calendario intenso de exposiciones.",
+      "gastronomy": "Panadería, queso, bistronomía y alta cocina con AOCs regionales.",
+      "curiosities": [
+        "La Torre Eiffel se construyó para la Exposición Universal de 1889.",
+        "El Louvre es uno de los museos más visitados del mundo."
+      ],
+      "tags": [
+        "arte",
+        "arquitectura",
+        "museos",
+        "sena"
+      ],
+      "featured": true,
+      "popularity": 96,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Tour_eiffel_at_sunrise_from_the_trocadero.jpg/1280px-Tour_eiffel_at_sunrise_from_the_trocadero.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "París. The Eiffel tower at sunrise, taken from the Place du Trocadero. Paris , France .",
+          "credit": "Tristan Nitot",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+          "file": "File:Tour eiffel at sunrise from the trocadero.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Eiffel_Tower_%2841283517675%29.jpg/1280px-Eiffel_Tower_%2841283517675%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "París. Torre Eiffel y el Sena al atardecer.",
+          "credit": "Pedro Szekely",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "file": "File:Eiffel Tower (41283517675).jpg"
+        }
+      ]
+    },
+    {
+      "id": "roma",
+      "name": "Roma",
+      "type": "historico",
+      "city": "Roma",
+      "country": "Italia",
+      "continent": "Europa",
+      "coords": {
+        "lat": 41.9028,
+        "lng": 12.4964
+      },
+      "languages": [
+        "Italiano"
+      ],
+      "currency": {
+        "code": "EUR",
+        "name": "Euro"
+      },
+      "climate": "Mediterráneo: veranos cálidos y secos, inviernos suaves.",
+      "bestSeason": "Abril–junio y septiembre–octubre, evitando el pico de calor y afluencia de julio–agosto.",
+      "description": "Ciudad estratificada sobre restos romanos, plazas barrocas y el Vaticano, con un centro histórico Patrimonio de la Humanidad.",
+      "culture": "Cuna simbólica de la Roma antigua y del catolicismo; arte de todas las épocas en espacio público.",
+      "traditions": "Paseo por fontanas y plazas, aperitivo y festividades religiosas.",
+      "gastronomy": "Carbonara, cacio e pepe, pizza al taglio y gelato.",
+      "curiosities": [
+        "El Coliseo podía albergar decenas de miles de espectadores en la Antigüedad.",
+        "La Ciudad del Vaticano es un Estado soberano enclaustrado en Roma."
+      ],
+      "tags": [
+        "antiguedad",
+        "barroco",
+        "unesco",
+        "mediterraneo"
+      ],
+      "featured": true,
+      "popularity": 95,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg/1280px-Colosseum_in_Rome%2C_Italy_-_April_2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Roma. A 4x4 segment panorama of the Coliseum at dusk. Taken by myself with a Canon 5D and 50mm f/1.8 lens at f/5.6.",
+          "credit": "Diliff",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 2.5",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+          "file": "File:Colosseum in Rome, Italy - April 2007.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Fontana_di_Trevi_di_notte.JPG/1280px-Fontana_di_Trevi_di_notte.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Roma. Fontana di Trevi di notte",
+          "credit": "RoyFokker",
+          "source": "Wikimedia Commons",
+          "license": "Public domain",
+          "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+          "file": "File:Fontana di Trevi di notte.JPG"
+        }
+      ]
+    },
+    {
+      "id": "reikiavik",
+      "name": "Reikiavik",
+      "type": "ciudad",
+      "city": "Reikiavik",
+      "country": "Islandia",
+      "continent": "Europa",
+      "coords": {
+        "lat": 64.1466,
+        "lng": -21.9426
+      },
+      "languages": [
+        "Islandés",
+        "Inglés"
+      ],
+      "currency": {
+        "code": "ISK",
+        "name": "Corona islandesa"
+      },
+      "climate": "Subpolar oceánico: fresco, ventoso y variable todo el año.",
+      "bestSeason": "Junio–agosto para luz prolongada; septiembre–marzo para auroras boreales.",
+      "description": "Capital más septentrional del mundo, base para explorar géiseres, lagunas geotérmicas y paisajes volcánicos.",
+      "culture": "Literatura de sagas, diseño contemporáneo y una escena musical muy activa para el tamaño de la ciudad.",
+      "traditions": "Baños geotérmicos, festivales de invierno y respeto por la naturaleza islandesa.",
+      "gastronomy": "Pescado, cordero, skyr y pan horneado con calor geotérmico.",
+      "curiosities": [
+        "Cerca del 90% de la calefacción islandesa proviene de energía geotérmica.",
+        "El nombre Reikiavik se asocia a “bahía de humos”."
+      ],
+      "tags": [
+        "nordico",
+        "geotermia",
+        "auroras",
+        "volcanes"
+      ],
+      "featured": false,
+      "popularity": 84,
+      "images": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Hallgr%C3%ADmskirkja.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "alt": "Reikiavik. Hallgrímskirkja , a statue of Leifr Eiríksson is shown on the picture. The image was enhanced by MarkSweep doing some image processing using The Gimp .",
+          "credit": "Andreas Tille",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:Hallgrímskirkja.jpeg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Icelandic_Coast_Guard_ship_and_Harpa_concert_hall.jpg/1280px-Icelandic_Coast_Guard_ship_and_Harpa_concert_hall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Reikiavik. Harpa, la sala de conciertos, vista desde el puerto.",
+          "credit": "Ypsilon",
+          "source": "Wikimedia Commons",
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "file": "File:Icelandic Coast Guard ship and Harpa concert hall.jpg"
+        }
+      ]
+    },
+    {
+      "id": "santorini",
+      "name": "Santorini",
+      "type": "costa",
+      "city": "Firá / Oia",
+      "country": "Grecia",
+      "continent": "Europa",
+      "coords": {
+        "lat": 36.3932,
+        "lng": 25.4615
+      },
+      "languages": [
+        "Griego"
+      ],
+      "currency": {
+        "code": "EUR",
+        "name": "Euro"
+      },
+      "climate": "Mediterráneo seco, con veranos cálidos y poca lluvia.",
+      "bestSeason": "Finales de abril–junio y septiembre–octubre, con menos calor y afluencia que en julio–agosto.",
+      "description": "Isla cicládica sobre una caldera volcánica, famosa por pueblos blancos, acantilados y atardeceres sobre el Egeo.",
+      "culture": "Herencia cicládica y restos minoicos en Akrotiri, sepultados por una erupción de la Edad del Bronce.",
+      "traditions": "Festividades ortodoxas locales y cultura de terrazas frente a la caldera.",
+      "gastronomy": "Tomate cherry de Santorini, fava, pescado fresco y vinos volcánicos (assyrtiko).",
+      "curiosities": [
+        "La caldera se formó por colapsos volcánicos sucesivos.",
+        "Akrotiri se suele comparar con una “Pompeya del Egeo” por su conservación bajo ceniza."
+      ],
+      "tags": [
+        "islas",
+        "volcan",
+        "mediterraneo",
+        "cicladas"
+      ],
+      "featured": false,
+      "popularity": 89,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Oia_-_Santorini_-_Greece_-_16.jpg/1280px-Oia_-_Santorini_-_Greece_-_16.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Santorini. Oia seen from a boat in the caldera, Santorini, Greece.",
+          "credit": "Norbert Nagel",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "file": "File:Oia - Santorini - Greece - 16.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Oia_-_Santorini_-_Greece_-_13.jpg/1280px-Oia_-_Santorini_-_Greece_-_13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Santorini. View of Oia from a boat in the caldera, Santorini, Greece.",
+          "credit": "Norbert Nagel",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "file": "File:Oia - Santorini - Greece - 13.jpg"
+        }
+      ]
+    },
+    {
+      "id": "praga",
+      "name": "Praga",
+      "type": "arquitectonico",
+      "city": "Praga",
+      "country": "Chequia",
+      "continent": "Europa",
+      "coords": {
+        "lat": 50.0755,
+        "lng": 14.4378
+      },
+      "languages": [
+        "Checo"
+      ],
+      "currency": {
+        "code": "CZK",
+        "name": "Corona checa"
+      },
+      "climate": "Continental: inviernos fríos y veranos templados.",
+      "bestSeason": "Mayo–junio y septiembre, con clima agradable para cruzar el Puente de Carlos.",
+      "description": "Capital bohemia de torres góticas, barrio judío y un casco histórico excepcionalmente conservado.",
+      "culture": "Literatura, música clásica y arquitectura que abarca gótico, barroco y modernismo.",
+      "traditions": "Mercados de Navidad, cerveza de taberna y conciertos en iglesias históricas.",
+      "gastronomy": "Goulash checo, knedlíky, trdelník y cervezas de tradición centroeuropea.",
+      "curiosities": [
+        "El centro histórico de Praga es Patrimonio de la Humanidad.",
+        "El Puente de Carlos conecta la Ciudad Vieja con Malá Strana desde el siglo XIV."
+      ],
+      "tags": [
+        "gotico",
+        "puentes",
+        "unesco",
+        "europa-central"
+      ],
+      "featured": false,
+      "popularity": 88,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Prague_skyline_at_dawn.jpg/1280px-Prague_skyline_at_dawn.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Praga. Prague skyline at dawn. View from Charles bridge to the East.",
+          "credit": "Petar Milošević",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:Prague skyline at dawn.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/North_view_of_Charles_Bridge_from_M%C3%A1nes%C5%AFv_most%2C_Prague_20160808_1.jpg/1280px-North_view_of_Charles_Bridge_from_M%C3%A1nes%C5%AFv_most%2C_Prague_20160808_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Praga. A north view of Charles Bridge from Mánesův most, Prague",
+          "credit": "DXR",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:North view of Charles Bridge from Mánesův most, Prague 20160808 1.jpg"
+        }
+      ]
+    },
+    {
+      "id": "edimburgo",
+      "name": "Edimburgo",
+      "type": "cultural",
+      "city": "Edimburgo",
+      "country": "Reino Unido",
+      "continent": "Europa",
+      "coords": {
+        "lat": 55.9533,
+        "lng": -3.1883
+      },
+      "languages": [
+        "Inglés"
+      ],
+      "currency": {
+        "code": "GBP",
+        "name": "Libra esterlina"
+      },
+      "climate": "Oceánico fresco, con lluvia frecuente y veranos suaves.",
+      "bestSeason": "Mayo–septiembre; agosto concentra el Festival de Edimburgo.",
+      "description": "Capital escocesa de Ciudad Vieja y Ciudad Nueva, presidida por el castillo sobre un peñón volcánico.",
+      "culture": "Capital de Escocia. El inglés es la lengua cotidiana; el escocés (Scots) y el gaélico escocés tienen presencia minoritaria. La ciudad es sede de uno de los mayores festivales de artes del mundo.",
+      "traditions": "Hogmanay, gaitas, whisky y el Military Tattoo en el castillo.",
+      "gastronomy": "Haggis, seafood del Mar del Norte y whisky de destilerías cercanas.",
+      "curiosities": [
+        "La Ciudad Vieja y la Ciudad Nueva son Patrimonio de la Humanidad.",
+        "Arthur’s Seat es un antiguo volcán en el corazón urbano."
+      ],
+      "tags": [
+        "castillo",
+        "festival",
+        "escocia",
+        "unesco"
+      ],
+      "featured": false,
+      "popularity": 85,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Edinburgh_Castle_-_A_-_Sarah_Stierch.jpg/1280px-Edinburgh_Castle_-_A_-_Sarah_Stierch.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Edimburgo. Edinburgh Castle, Edinburgh, Scotland",
+          "credit": "Sarah Stierch",
+          "source": "Wikimedia Commons",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "file": "File:Edinburgh Castle - A - Sarah Stierch.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/South_side_of_Edinburgh_Castle_in_the_snow.jpg/1280px-South_side_of_Edinburgh_Castle_in_the_snow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Edimburgo. Photograph of the south side of Edinburgh Castle in the snow, taken from Grassmarket.",
+          "credit": "Mike Shaw",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:South side of Edinburgh Castle in the snow.jpg"
+        }
+      ]
+    },
+    {
+      "id": "barcelona",
+      "name": "Barcelona",
+      "type": "arquitectonico",
+      "city": "Barcelona",
+      "country": "España",
+      "continent": "Europa",
+      "coords": {
+        "lat": 41.3874,
+        "lng": 2.1686
+      },
+      "languages": [
+        "Catalán",
+        "Español"
+      ],
+      "currency": {
+        "code": "EUR",
+        "name": "Euro"
+      },
+      "climate": "Mediterráneo: inviernos suaves y veranos cálidos.",
+      "bestSeason": "Mayo–junio y septiembre–octubre para ciudad y playa sin calor extremo.",
+      "description": "Ciudad mediterránea de ensanche modernista, barrio gótico y frente marítimo abierto tras los Juegos de 1992.",
+      "culture": "Modernismo catalán (Gaudí), lengua catalana y una escena creativa contemporánea.",
+      "traditions": "Castellers, verbenas de Sant Joan y fiestas mayores de barrio.",
+      "gastronomy": "Tapas, pa amb tomàquet, mariscos y cocina de mercado.",
+      "curiosities": [
+        "Varias obras de Gaudí en la ciudad son Patrimonio de la Humanidad.",
+        "Las Ramblas conectan plaza de Catalunya con el puerto antiguo."
+      ],
+      "tags": [
+        "modernismo",
+        "mediterraneo",
+        "gaudi",
+        "playa"
+      ],
+      "featured": false,
+      "popularity": 91,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Sagrada_Familia_03.jpg/1280px-Sagrada_Familia_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Barcelona. The Passion façade of the Sagrada Familia , Barcelona, Spain",
+          "credit": "Bernard Gagnon",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "file": "File:Sagrada Familia 03.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Sagrada_Familia_March_2015-10a.jpg/1280px-Sagrada_Familia_March_2015-10a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Barcelona. The ceiling of Sagrada Familia Cathedral, Barcelona, Spain",
+          "credit": "Alvesgaspar",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:Sagrada Familia March 2015-10a.jpg"
+        }
+      ]
+    },
+    {
+      "id": "sydney",
+      "name": "Sídney",
+      "type": "ciudad",
+      "city": "Sídney",
+      "country": "Australia",
+      "continent": "Oceanía",
+      "coords": {
+        "lat": -33.8688,
+        "lng": 151.2093
+      },
+      "languages": [
+        "Inglés"
+      ],
+      "currency": {
+        "code": "AUD",
+        "name": "Dólar australiano"
+      },
+      "climate": "Subtropical húmedo: veranos cálidos e inviernos suaves.",
+      "bestSeason": "Septiembre–noviembre y marzo–mayo, templados para bahía y playas.",
+      "description": "Mayor ciudad australiana, organizada en torno a un puerto natural con la Ópera y el Harbour Bridge como hitos.",
+      "culture": "Ciudad multicultural sobre territorio de pueblos eora; fuerte vida de playa y artes.",
+      "traditions": "Cultura de surf, mercados de fin de semana y fuegos artificiales de Año Nuevo en el puerto.",
+      "gastronomy": "Mariscos, brunch y escena gastronómica de inmigraciones asiáticas y europeas.",
+      "curiosities": [
+        "La Ópera de Sídney es Patrimonio de la Humanidad.",
+        "Port Jackson es uno de los puertos naturales más famosos del mundo."
+      ],
+      "tags": [
+        "puerto",
+        "opera",
+        "playa",
+        "unesco"
+      ],
+      "featured": true,
+      "popularity": 90,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Sydney_opera_house_side_view.jpg/1280px-Sydney_opera_house_side_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Sídney. Sydney Opera House viewed from the side",
+          "credit": "Mfield , Matthew Field, http://www.photography.mattfield.com",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "file": "File:Sydney opera house side view.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Sydney_Opera_House_-_Dec_2008.jpg/1280px-Sydney_Opera_House_-_Dec_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Sídney. A exposure blended photo of the Sydney Opera House , as viewed from the Sydney Harbour Bridge . Taken by myself with a Canon 5D and 100mm f/2.8 macro lens.",
+          "credit": "Diliff",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "file": "File:Sydney Opera House - Dec 2008.jpg"
+        }
+      ]
+    },
+    {
+      "id": "queenstown",
+      "name": "Queenstown",
+      "type": "montana",
+      "city": "Queenstown",
+      "country": "Nueva Zelanda",
+      "continent": "Oceanía",
+      "coords": {
+        "lat": -45.0312,
+        "lng": 168.6626
+      },
+      "languages": [
+        "Inglés",
+        "Maorí"
+      ],
+      "currency": {
+        "code": "NZD",
+        "name": "Dólar neozelandés"
+      },
+      "climate": "Alpino templado: veranos agradables e inviernos fríos con nieve en estaciones cercanas.",
+      "bestSeason": "Diciembre–febrero para lagos; junio–agosto para esquí en The Remarkables y Coronet Peak.",
+      "description": "Capital del aventurismo en la Isla Sur, junto al lago Wakatipu y picos de Otago.",
+      "culture": "Turismo de aventura sobre paisaje maorí y colonización británica de la región.",
+      "traditions": "Deportes extremos, vinotecas de Central Otago y respeto por tracks de montaña.",
+      "gastronomy": "Cordero, pinot noir de Central Otago y cocina de lodges.",
+      "curiosities": [
+        "Se considera una de las cunas comerciales del bungee jump moderno.",
+        "El lago Wakatipu tiene una forma de “S” muy característica."
+      ],
+      "tags": [
+        "aventura",
+        "lagos",
+        "alpes",
+        "nueva-zelanda"
+      ],
+      "featured": false,
+      "popularity": 86,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Queenstown%2C_New_Zealand-16Jan2008.jpg/1280px-Queenstown%2C_New_Zealand-16Jan2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Queenstown. Queenstown, New Zealand.",
+          "credit": "Matthias Klappenbach",
+          "source": "Wikimedia Commons",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "file": "File:Queenstown, New Zealand-16Jan2008.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Lake_Wakatipu_from_Queenstown_gondola.jpg/1280px-Lake_Wakatipu_from_Queenstown_gondola.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Queenstown. Lake Wakatipu seen from the top of the Queenstown gondola.",
+          "credit": "Avenue",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "file": "File:Lake Wakatipu from Queenstown gondola.jpg"
+        }
+      ]
+    },
+    {
+      "id": "uluru",
+      "name": "Uluru",
+      "type": "natural",
+      "city": "Yulara",
+      "country": "Australia",
+      "continent": "Oceanía",
+      "coords": {
+        "lat": -25.3444,
+        "lng": 131.0369
+      },
+      "languages": [
+        "Inglés",
+        "Pitjantjatjara",
+        "Yankunytjatjara"
+      ],
+      "currency": {
+        "code": "AUD",
+        "name": "Dólar australiano"
+      },
+      "climate": "Desértico: días muy calurosos y noches frescas; lluvias irregulares.",
+      "bestSeason": "Mayo–septiembre, con temperaturas más moderadas.",
+      "description": "Monolito de arenisca en el Territorio del Norte, lugar sagrado de los anangu y centro del Parque Nacional Uluru-Kata Tjuta.",
+      "culture": "Sitio de profunda significación espiritual para los anangu; la ascensión está cerrada desde 2019.",
+      "traditions": "Relatos tjukurpa (ley del sueño) y visitas respetuosas a miradores y centros culturales.",
+      "gastronomy": "Cocina de resorts en Yulara con productos del Outback y propuestas contemporáneas australianas.",
+      "curiosities": [
+        "Uluru-Kata Tjuta es Patrimonio de la Humanidad por valores naturales y culturales.",
+        "La mayor parte de su masa rocosa se encuentra bajo tierra."
+      ],
+      "tags": [
+        "outback",
+        "sagrado",
+        "unesco",
+        "desierto"
+      ],
+      "featured": true,
+      "popularity": 87,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Petermann_Ranges_%28AU%29%2C_Uluru-Kata_Tjuta_National_Park%2C_Uluru%2C_Kuniya_Walk_--_2019_--_3636.jpg/1280px-Petermann_Ranges_%28AU%29%2C_Uluru-Kata_Tjuta_National_Park%2C_Uluru%2C_Kuniya_Walk_--_2019_--_3636.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Uluru. Petermann Ranges (AU), Uluru-Kata Tjuta National Park, Uluru, Kuniya Walk -- 2019 -- 3636",
+          "credit": "Dietmar Rabich",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:Petermann Ranges (AU), Uluru-Kata Tjuta National Park, Uluru, Kuniya Walk -- 2019 -- 3636.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Uluru_sunset_-_%2813113209863%29.jpg/1280px-Uluru_sunset_-_%2813113209863%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Uluru. Uluru sunset...",
+          "credit": "Murray Foubister",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "file": "File:Uluru sunset - (13113209863).jpg"
+        }
+      ]
+    },
+    {
+      "id": "gran-barrera",
+      "name": "Gran Barrera de Coral",
+      "type": "costa",
+      "city": "Cairns / Airlie Beach",
+      "country": "Australia",
+      "continent": "Oceanía",
+      "coords": {
+        "lat": -18.2871,
+        "lng": 147.6992,
+        "note": "centroide en el mar del Coral"
+      },
+      "languages": [
+        "Inglés"
+      ],
+      "currency": {
+        "code": "AUD",
+        "name": "Dólar australiano"
+      },
+      "climate": "Tropical en Queensland: estación húmeda (nov–abr) y seca (may–oct).",
+      "bestSeason": "Junio–octubre, con agua más clara y menor riesgo de medusas en muchas zonas.",
+      "description": "El mayor sistema de arrecifes coralinos del mundo, frente a la costa de Queensland, con islas e isletas para snorkel y buceo.",
+      "culture": "Territorio marino de pueblos costeros aborígenes e isleños del Estrecho de Torres.",
+      "traditions": "Turismo de conservación, educación marina y navegación entre islas.",
+      "gastronomy": "Mariscos de Queensland, barra (barramundi) y cocina tropical de Cairns.",
+      "curiosities": [
+        "Es Patrimonio de la Humanidad desde 1981.",
+        "Se extiende por más de 2.000 km a lo largo de la costa este australiana."
+      ],
+      "tags": [
+        "arrecife",
+        "buceo",
+        "unesco",
+        "mar"
+      ],
+      "featured": false,
+      "popularity": 89,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Coral_Outcrop_Flynn_Reef.jpg/1280px-Coral_Outcrop_Flynn_Reef.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Gran Barrera de Coral. A variety of corals form an outcrop on Flynn Reef, part of the Great Barrier Reef near Cairns, Queensland, Australia.",
+          "credit": "Toby Hudson",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "file": "File:Coral Outcrop Flynn Reef.jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Great_Barrier_Reef_Queensland_Ank_Kumar.jpg/1280px-Great_Barrier_Reef_Queensland_Ank_Kumar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Gran Barrera de Coral. Great Barrier Reef Queensland Ank Kumar",
+          "credit": "Ank Kumar",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:Great Barrier Reef Queensland Ank Kumar.jpg"
+        }
+      ]
+    },
+    {
+      "id": "peninsula-antartica",
+      "name": "Península Antártica",
+      "type": "natural",
+      "city": "Sin localidad permanente",
+      "country": "Antártida",
+      "continent": "Antártida",
+      "coords": {
+        "lat": -63.2134,
+        "lng": -57.3015,
+        "note": "Prime Head, extremo norte"
+      },
+      "languages": [
+        "No hay idioma oficial"
+      ],
+      "currency": {
+        "code": "—",
+        "name": "No hay moneda oficial. El área se rige por el Tratado Antártico (1959)."
+      },
+      "climate": "Polar marítimo en la península: frío extremo, viento y hielo casi permanente.",
+      "bestSeason": "Noviembre–marzo (verano austral), única ventana habitual de visitas turísticas.",
+      "description": "Extremo norte del continente antártico, con canales glaciados, fauna marina y estaciones científicas. No es un país y no tiene habitantes permanentes.",
+      "culture": "No hay población civil permanente ni un Estado antártico. La presencia humana se limita a bases científicas y a visitas estacionales reguladas por el Tratado Antártico.",
+      "traditions": "No hay tradiciones de una comunidad residente. Aplican los protocolos científicos y las normas ambientales del Sistema del Tratado Antártico.",
+      "gastronomy": "No existe una gastronomía local. La alimentación depende de los suministros de buques y estaciones.",
+      "curiosities": [
+        "Varios países mantienen reclamos territoriales, pero el Tratado Antártico congela la soberanía y destina el continente a la ciencia.",
+        "La península es una de las zonas del continente que más se ha calentado en décadas recientes."
+      ],
+      "tags": [
+        "polar",
+        "ciencia",
+        "hielo",
+        "fauna"
+      ],
+      "featured": false,
+      "popularity": 78,
+      "images": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Lemaire_Channel%2C_Antarctica_%286062299241%29.jpg/1280px-Lemaire_Channel%2C_Antarctica_%286062299241%29.jpg",
+          "alt": "Península Antártica. Canal Lemaire, entre paredes de hielo.",
+          "credit": "Liam Quinn",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "file": "File:Lemaire Channel, Antarctica (6062299241).jpg"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/00_2188_Antarktis_-_Andvord_Bay.jpg/1280px-00_2188_Antarktis_-_Andvord_Bay.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "alt": "Península Antártica. Andvord Bay (Neko Harbour): a bay on the western side of the Antarctic Peninsula.",
+          "credit": "W. Bulach",
+          "source": "Wikimedia Commons",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "file": "File:00 2188 Antarktis - Andvord Bay.jpg"
+        }
+      ]
+    }
+  ]
 }
