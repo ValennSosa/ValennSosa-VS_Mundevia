@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comparar destinos · VS Mundévia</title>
-    <meta name="description" content="Compará dos destinos de VS Mundévia: clima, moneda, idiomas, cultura y datos geográficos.">
+    <meta name="description" content="Compará de dos a tres destinos de VS Mundévia: lugar, categoría, descripción y coordenadas.">
     <meta property="og:title" content="Comparar destinos · VS Mundévia">
-    <meta property="og:description" content="Elegí dos lugares desde el buscador y compará sus características.">
+    <meta property="og:description" content="Elegí hasta tres lugares y compará sus datos en paralelo.">
     <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,34 +23,38 @@
       <header class="page-header u-container">
         <p class="page-header__eyebrow">Comparador</p>
         <h1 class="page-header__title">Comparar destinos</h1>
-        <p class="page-header__lead" data-compare-status>
-          Seleccioná dos destinos con el buscador de sugerencias.
+        <p class="page-header__lead" data-compare-status aria-live="polite">
+          Buscá por nombre o país y elegí de dos a tres destinos.
         </p>
       </header>
 
       <section class="section section--tight">
-        <div class="u-container">
-          <div class="grid-feature">
-            <div class="u-surface" style="padding: 1rem;" data-search-root data-compare-slot="0">
-              <h2 class="h5">Destino A</h2>
-              <label class="u-sr-only" for="compare-a">Buscar destino A</label>
-              <input id="compare-a" class="form-control" type="search" placeholder="Buscar…" autocomplete="off" data-search-input>
-              <ul id="compare-suggestions-a" class="list-unstyled mt-2 mb-0" role="listbox" data-search-suggestions hidden></ul>
-            </div>
-            <div class="u-surface" style="padding: 1rem;" data-search-root data-compare-slot="1">
-              <h2 class="h5">Destino B</h2>
-              <label class="u-sr-only" for="compare-b">Buscar destino B</label>
-              <input id="compare-b" class="form-control" type="search" placeholder="Buscar…" autocomplete="off" data-search-input>
-              <ul id="compare-suggestions-b" class="list-unstyled mt-2 mb-0" role="listbox" data-search-suggestions hidden></ul>
+        <div class="u-container compare">
+          <div class="compare-picker">
+            <h2 class="compare-picker__title">Elegir destinos</h2>
+            <div class="search-field" data-search-root>
+              <label class="u-sr-only" for="compare-query">Buscar destino por nombre o país</label>
+              <input
+                id="compare-query"
+                class="form-control search-field__input"
+                type="search"
+                placeholder="Nombre o país"
+                autocomplete="off"
+                data-search-input
+              >
+              <button class="search-field__clear" type="button" data-search-clear hidden aria-label="Limpiar búsqueda">×</button>
+              <ul id="compare-suggestions" class="search-suggest" role="listbox" data-search-suggestions hidden></ul>
             </div>
           </div>
 
-          <div class="placeholder-panel mt-4" data-aos="fade-up">
-            <h2 class="placeholder-panel__title">Tabla comparativa</h2>
-            <p class="u-mb-0">
-              Ubicación, clima, moneda, idiomas, cultura y datos geográficos — Etapa 5.
-            </p>
+          <div data-compare-selection></div>
+
+          <div class="compare-actions">
+            <button class="btn btn--primary" type="button" data-compare-confirm disabled>Comparar</button>
+            <button class="btn btn--ghost" type="button" data-compare-clear disabled>Limpiar</button>
           </div>
+
+          <div data-compare-board hidden></div>
         </div>
       </section>
     </main>

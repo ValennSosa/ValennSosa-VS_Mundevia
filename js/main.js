@@ -59,7 +59,7 @@ async function bootPage(page) {
     }
     case "compare": {
       const { initComparePage } = await import("./pages/compare.js");
-      initComparePage();
+      await initComparePage();
       break;
     }
     case "favorites": {
