@@ -1,8 +1,19 @@
 import { renderNavbar } from "./components/navbar.js";
 import { renderFooter } from "./components/footer.js";
 
+function prefersReducedMotion() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function revealWithoutMotion() {
+  document.querySelectorAll("[data-aos]").forEach((element) => {
+    element.removeAttribute("data-aos");
+    element.removeAttribute("data-aos-delay");
+  });
+}
+
 function initAOS() {
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if (prefersReducedMotion()) return;
   if (window.AOS) {
     window.AOS.init({
       duration: 700,
@@ -64,6 +75,8 @@ async function bootPage(page) {
 document.addEventListener("DOMContentLoaded", async () => {
   renderNavbar(document.querySelector("[data-app-header]"));
   renderFooter(document.querySelector("[data-app-footer]"));
-  initAOS();
+  if (prefersReducedMotion()) revealWithoutMotion();
+  else initAOS();
   await bootPage(detectPage());
+  if (prefersReducedMotion()) revealWithoutMotion();
 });

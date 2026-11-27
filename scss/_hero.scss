@@ -22,10 +22,18 @@
 
 .hero__content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: min(100% - 2rem, $container-max);
   margin-inline: auto;
   padding-block: $space-6 $space-5;
+  pointer-events: none;
+}
+
+.hero__eyebrow,
+.hero__title,
+.hero__lead,
+.hero__actions {
+  pointer-events: auto;
 }
 
 .hero__eyebrow {
@@ -56,15 +64,13 @@
 
 .hero__globe-slot {
   position: absolute;
-  inset: 8% 0 auto;
-  height: 55%;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.55;
+  inset: 0.25rem 0 auto;
+  height: min(78vw, 26rem);
+  z-index: 1;
+  pointer-events: auto;
 
   @include respond-up($bp-lg) {
-    inset: 5% 0 20% 42%;
+    inset: 2% 0 12% 38%;
     height: auto;
-    opacity: 0.85;
   }
 }

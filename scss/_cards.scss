@@ -235,6 +235,11 @@
   }
 }
 
+#explorer-search.form-control::placeholder {
+  color: #d3deea;
+  opacity: 1;
+}
+
 .search-field__clear {
   position: absolute;
   top: 0.55rem;

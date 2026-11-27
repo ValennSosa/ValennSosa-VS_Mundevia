@@ -1,0 +1,6 @@
+{
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "buildCommand": "npm install && node scripts/export-static.mjs",
+  "outputDirectory": ".vercel-out"
+}

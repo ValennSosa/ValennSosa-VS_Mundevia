@@ -15,6 +15,13 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./node_modules/three/build/three.module.js"
+        }
+      }
+    </script>
   </head>
   <body>
     <a class="u-skip-link" href="#contenido">Saltar al contenido</a>
@@ -23,7 +30,7 @@
     <main id="contenido" class="site-main page-shell">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero__media" aria-hidden="true"></div>
-        <div class="hero__globe-slot" data-globe aria-hidden="true"></div>
+        <div class="hero__globe-slot" data-globe role="region" aria-label="Globo terráqueo interactivo"></div>
         <div class="hero__content">
           <p class="hero__eyebrow" data-aos="fade-up">Turismo · Cultura · Exploración</p>
           <h1 id="hero-title" class="hero__title" data-aos="fade-up" data-aos-delay="60">VS&nbsp;Mundévia</h1>
