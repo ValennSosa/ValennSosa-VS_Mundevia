@@ -128,20 +128,28 @@
 
 .spot-row {
   display: grid;
-  grid-template-columns: 7.5rem 1fr;
   gap: $space-3;
   align-items: center;
   padding: $space-3;
   border: 1px solid $color-border;
   border-radius: $radius-md;
   background: rgba(12, 21, 38, 0.55);
-  text-decoration: none;
-  color: inherit;
-  transition: border-color $transition-base, background $transition-base;
 
-  &:hover {
-    border-color: rgba(126, 184, 212, 0.35);
-    background: rgba(12, 21, 38, 0.8);
+  @include respond-up($bp-md) {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+.spot-row__link {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: $space-3;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover .spot-row__title {
+    color: $color-gold-soft;
   }
 
   &:focus-visible {
@@ -150,6 +158,30 @@
 
   @include respond-up($bp-md) {
     grid-template-columns: 10rem 1fr;
+  }
+}
+
+.spot-row__locate {
+  justify-self: start;
+  min-height: 2.25rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  background: transparent;
+  color: $color-gold-soft;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    border-color: $color-gold;
+    color: $color-text;
+  }
+
+  &:focus-visible {
+    @include focus-ring;
   }
 }
 

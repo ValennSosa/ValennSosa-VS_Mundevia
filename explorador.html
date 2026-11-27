@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explorador global · VS Mundévia</title>
-    <meta name="description" content="Explorá el catálogo de VS Mundévia: filtrá por continente, país y categoría, y descubrí destinos destacados.">
+    <meta name="description" content="Explorá el catálogo de VS Mundévia en el mapa y filtrá por continente, país y categoría.">
     <meta property="og:title" content="Explorador global · VS Mundévia">
-    <meta property="og:description" content="Catálogo filtrable y acceso accesible a destinos del mundo. El mapa Leaflet llega en una etapa posterior.">
+    <meta property="og:description" content="Mapa interactivo y catálogo filtrable de los destinos de VS Mundévia.">
     <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
+    <link rel="stylesheet" href="./node_modules/leaflet/dist/leaflet.css">
     <link rel="stylesheet" href="./styles/style.css">
   </head>
   <body>
@@ -20,11 +21,11 @@
     <div data-app-header></div>
 
     <main id="contenido" class="site-main page-shell">
-      <header class="page-header u-container">
+      <header class="page-header u-container" id="catalogo">
         <p class="page-header__eyebrow">Explorador global</p>
         <h1 class="page-header__title">Catálogo del mundo</h1>
         <p class="page-header__lead">
-          Filtrá por continente, país y categoría. El mapa Leaflet se incorporará más adelante; esta lista es la vía principal y accesible de exploración.
+          Filtrá por continente, país y categoría, o recorré los mismos destinos en el mapa.
         </p>
       </header>
 
@@ -64,7 +65,21 @@
             <p class="explorer-status" data-explorer-status aria-live="polite">Cargando catálogo…</p>
           </div>
 
-          <div class="map map--deferred" data-map role="region" aria-label="Mapa interactivo (próxima etapa)"></div>
+          <div id="mapa" class="map" data-map role="region" aria-labelledby="map-title" aria-describedby="map-hint">
+            <h2 id="map-title" class="map__title">Mapa de destinos</h2>
+            <p id="map-hint" class="map__hint">Arrastrá para moverte. Usá la rueda, el pellizco o los botones para acercar. Elegí un punto para ver el destino.</p>
+            <div class="map__stage">
+              <div class="map__canvas" data-map-canvas></div>
+              <p class="map__status" data-map-status role="status">Preparando el mapa…</p>
+              <p class="map__empty" data-map-empty hidden>Ningún destino coincide con esta búsqueda. Limpiá los filtros para volver a verlos todos.</p>
+            </div>
+            <p class="map__legend">
+              <span class="map-pin map-pin--legend" aria-hidden="true"><span class="map-pin__dot"></span></span>
+              Un destino
+              <span class="map-cluster map-cluster--legend" aria-hidden="true"><span>2</span></span>
+              Varios cerca
+            </p>
+          </div>
 
           <div class="explorer-list" data-explorer-list aria-live="polite"></div>
         </div>

@@ -41,3 +41,16 @@ cpSync(
   "node_modules/three/examples/jsm/controls/OrbitControls.js",
   join(out, "node_modules/three/examples/jsm/controls/OrbitControls.js")
 );
+mkdirSync(join(out, "node_modules/leaflet/dist/images"), { recursive: true });
+cpSync("node_modules/leaflet/dist/leaflet.css", join(out, "node_modules/leaflet/dist/leaflet.css"));
+cpSync(
+  "node_modules/leaflet/dist/leaflet-src.esm.js",
+  join(out, "node_modules/leaflet/dist/leaflet-src.esm.js")
+);
+cpSync(
+  "node_modules/leaflet/dist/leaflet-src.esm.js.map",
+  join(out, "node_modules/leaflet/dist/leaflet-src.esm.js.map")
+);
+cpSync("node_modules/leaflet/dist/images", join(out, "node_modules/leaflet/dist/images"), {
+  recursive: true,
+});

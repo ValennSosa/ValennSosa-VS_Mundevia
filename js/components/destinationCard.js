@@ -45,28 +45,41 @@ export function createDestinationCard(destination, { labels = {}, variant = "edi
   return article;
 }
 
-export function createDestinationRow(destination, { labels = {} } = {}) {
-  const row = document.createElement("a");
+export function createDestinationRow(destination, { labels = {}, onLocate } = {}) {
+  const row = document.createElement("article");
   row.className = "spot-row";
-  row.href = destinationHref(destination.id);
+  row.dataset.destinationId = destination.id;
 
   const image = getImage(destination, 0);
   const type = labels[destination.type] || TYPE_FALLBACK[destination.type] || destination.type;
 
   row.innerHTML = `
-    <div class="spot-row__media">
-      ${
-        image
-          ? `<img src="${image.url}" alt="${escapeAttr(image.alt || destination.name)}" loading="lazy" width="240" height="160">`
-          : ""
-      }
-    </div>
-    <div class="spot-row__body">
-      <p class="spot__eyebrow">${escapeHtml(type)}</p>
-      <h3 class="spot-row__title">${escapeHtml(destination.name)}</h3>
-      <p class="spot__meta">${escapeHtml(`${destination.city} · ${destination.country} · ${destination.continent}`)}</p>
-    </div>
+    <a class="spot-row__link" href="${destinationHref(destination.id)}">
+      <div class="spot-row__media">
+        ${
+          image
+            ? `<img src="${image.url}" alt="${escapeAttr(image.alt || destination.name)}" loading="lazy" width="240" height="160">`
+            : ""
+        }
+      </div>
+      <div class="spot-row__body">
+        <p class="spot__eyebrow">${escapeHtml(type)}</p>
+        <h3 class="spot-row__title">${escapeHtml(destination.name)}</h3>
+        <p class="spot__meta">${escapeHtml(`${destination.city} · ${destination.country} · ${destination.continent}`)}</p>
+      </div>
+    </a>
+    ${
+      onLocate
+        ? `<button class="spot-row__locate" type="button">En el mapa</button>`
+        : ""
+    }
   `;
+
+  if (onLocate) {
+    const button = row.querySelector(".spot-row__locate");
+    button.setAttribute("aria-label", `Ver ${destination.name} en el mapa`);
+    button.addEventListener("click", () => onLocate(destination));
+  }
 
   return row;
 }

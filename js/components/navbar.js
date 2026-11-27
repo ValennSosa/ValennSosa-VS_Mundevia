@@ -1,18 +1,20 @@
 import { ROUTES } from "../config.js";
 
 const NAV_ITEMS = [
-  { href: ROUTES.home, label: "Explorar", id: "home" },
-  { href: ROUTES.explorer, label: "Mapa", id: "explorer" },
-  { href: ROUTES.surprise, label: "Sorpréndeme", id: "surprise" },
-  { href: ROUTES.compare, label: "Comparar", id: "compare" },
-  { href: ROUTES.favorites, label: "Favoritos", id: "favorites" },
+  { href: `${ROUTES.explorer}#catalogo`, label: "Explorar", id: "catalog", current: "location" },
+  { href: `${ROUTES.explorer}#mapa`, label: "Mapa", id: "map", current: "location" },
+  { href: ROUTES.surprise, label: "Sorpréndeme", id: "surprise", current: "page" },
+  { href: ROUTES.compare, label: "Comparar", id: "compare", current: "page" },
+  { href: ROUTES.favorites, label: "Favoritos", id: "favorites", current: "page" },
 ];
 
-function currentPageId() {
-  const file = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
-  if (file === "" || file === "index.html") return "home";
-  if (file.includes("explorador")) return "explorer";
-  if (file.includes("destino")) return "destination";
+function currentPageFile() {
+  return (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
+}
+
+function activeNavId() {
+  const file = currentPageFile();
+  if (file.includes("explorador")) return window.location.hash === "#mapa" ? "map" : "catalog";
   if (file.includes("sorprendeme")) return "surprise";
   if (file.includes("comparar")) return "compare";
   if (file.includes("favoritos")) return "favorites";
@@ -22,9 +24,7 @@ function currentPageId() {
 export function renderNavbar(target) {
   if (!target) return;
 
-  const pageId = currentPageId();
-  // El catálogo es la sección Explorar. Mapa no se marca activo: el mapa Leaflet es una etapa posterior.
-  const active = pageId === "explorer" ? "home" : pageId;
+  const active = activeNavId();
 
   target.innerHTML = `
     <header class="site-header" data-navbar>
@@ -49,7 +49,9 @@ export function renderNavbar(target) {
               <a
                 class="nav-link${active === item.id ? " is-active" : ""}"
                 href="${item.href}"
-                ${active === item.id ? 'aria-current="page"' : ""}
+                data-nav-id="${item.id}"
+                data-nav-current="${item.current}"
+                ${active === item.id ? `aria-current="${item.current}"` : ""}
               >${item.label}</a>
             `
           ).join("")}
@@ -60,6 +62,25 @@ export function renderNavbar(target) {
 
   const toggle = target.querySelector("[data-nav-toggle]");
   const menu = target.querySelector("[data-nav-menu]");
+
+  const applyActive = () => {
+    const current = activeNavId();
+    menu?.querySelectorAll("[data-nav-id]").forEach((link) => {
+      const on = link.dataset.navId === current;
+      link.classList.toggle("is-active", on);
+      if (on) link.setAttribute("aria-current", link.dataset.navCurrent || "page");
+      else link.removeAttribute("aria-current");
+    });
+  };
+
+  menu?.querySelectorAll(".nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("is-open");
+      toggle?.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  window.addEventListener("hashchange", applyActive);
 
   toggle?.addEventListener("click", () => {
     const open = menu.classList.toggle("is-open");

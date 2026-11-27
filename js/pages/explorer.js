@@ -7,9 +7,6 @@ import { initMap } from "../viz/map.js";
 
 export async function initExplorerPage() {
   const mapSlot = document.querySelector("[data-map]");
-  // Leaflet se carga de forma diferida en la Etapa 3.
-  await initMap(mapSlot, { destinations: [] });
-
   const listRoot = document.querySelector("[data-explorer-list]");
   const status = document.querySelector("[data-explorer-status]");
   const continentSelect = document.querySelector("[data-filter-continent]");
@@ -23,6 +20,12 @@ export async function initExplorerPage() {
   let destinations = [];
   let labels = {};
   let query = "";
+  let mapApi = {
+    setDestinations() {},
+    focus() {},
+    resetView() {},
+    destroy() {},
+  };
 
   try {
     const [meta, data] = await Promise.all([getCatalogMeta(), getDestinations()]);
@@ -31,6 +34,8 @@ export async function initExplorerPage() {
   } catch (error) {
     console.error(error);
     if (status) status.textContent = "No se pudo cargar el catálogo.";
+    const mapStatus = mapSlot?.querySelector("[data-map-status]");
+    if (mapStatus) mapStatus.textContent = "No se pudo cargar el catálogo para el mapa.";
     return;
   }
 
@@ -98,6 +103,12 @@ export async function initExplorerPage() {
     searchRoot._listTimer = window.setTimeout(render, 180);
   });
 
+  try {
+    mapApi = (await initMap(mapSlot, { destinations })) || mapApi;
+  } catch (error) {
+    console.error(error);
+  }
+
   render();
 
   function refreshCountries() {
@@ -128,11 +139,20 @@ export async function initExplorerPage() {
         </div>
       `;
       if (status) status.textContent = "0 destinos";
+      mapApi.setDestinations([], { fit: false, total: destinations.length });
       return;
     }
 
+    mapApi.setDestinations(filtered, { fit: true, total: destinations.length });
+
     filtered.forEach((destination, index) => {
-      const row = createDestinationRow(destination, { labels });
+      const row = createDestinationRow(destination, {
+        labels,
+        onLocate: (item) => {
+          if (window.location.hash !== "#mapa") window.location.hash = "mapa";
+          mapApi.focus(item.id);
+        },
+      });
       if (index < 8) row.setAttribute("data-aos", "fade-up");
       listRoot.appendChild(row);
     });

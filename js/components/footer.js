@@ -16,7 +16,7 @@ export function renderFooter(target) {
           <h2 class="site-footer__title">Explorar</h2>
           <ul class="site-footer__list">
             <li><a href="${ROUTES.home}">Inicio</a></li>
-            <li><a href="${ROUTES.explorer}">Mapa global</a></li>
+            <li><a href="${ROUTES.explorer}#mapa">Mapa global</a></li>
             <li><a href="${ROUTES.surprise}">Sorpréndeme</a></li>
           </ul>
         </div>

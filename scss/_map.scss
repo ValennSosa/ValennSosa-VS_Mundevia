@@ -1,27 +1,258 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+#catalogo,
+#mapa {
+  scroll-margin-top: calc(#{$nav-height} + 0.75rem);
+}
+
 .map {
-  width: 100%;
-  min-height: 12rem;
+  display: grid;
+  gap: $space-2;
+}
+
+.map__title {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.map__hint,
+.map__legend {
+  margin: 0;
+  color: $color-text-muted;
+  font-size: 0.8rem;
+}
+
+.map__legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.7rem;
+}
+
+.map__stage {
+  position: relative;
   border: 1px solid $color-border;
   border-radius: $radius-lg;
   overflow: hidden;
-  background: $color-slate;
+  background: $color-night;
 }
 
-.map--deferred {
-  min-height: 10rem;
+.map__canvas {
+  height: clamp(18rem, 62vh, 36rem);
+  background: $color-night;
 }
 
-.map__fallback {
+.map__status:not(.u-sr-only) {
+  position: absolute;
+  inset: 0;
+  z-index: 500;
   display: grid;
   place-items: center;
-  height: 100%;
-  min-height: 10rem;
+  margin: 0;
   padding: $space-4;
-  color: $color-text-muted;
   text-align: center;
+  color: $color-text;
+  background: rgba(5, 8, 15, 0.55);
+}
+
+.map__empty {
+  position: absolute;
+  z-index: 450;
+  top: 0.75rem;
+  left: 50%;
+  width: min(22rem, calc(100% - 2rem));
+  margin: 0;
+  padding: 0.7rem 0.9rem;
+  transform: translateX(-50%);
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background: rgba(7, 11, 20, 0.88);
+  color: $color-text;
+  text-align: center;
+  pointer-events: none;
+}
+
+.map__empty[hidden] {
+  display: none;
+}
+
+.map__reset {
+  display: block;
+  margin-top: 0.45rem;
+  padding: 0.4rem 0.65rem;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  background: rgba(7, 11, 20, 0.9);
+  color: $color-gold-soft;
+  font: inherit;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-text;
+    border-color: $color-gold;
+  }
+}
+
+.map-pin {
+  background: transparent;
+  border: 0;
+}
+
+.map-pin__dot {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 5px;
+  border-radius: 50%;
+  background: $color-gold-soft;
+  box-shadow: 0 0 0 5px rgba(201, 168, 106, 0.28);
+}
+
+.map-pin.is-selected .map-pin__dot {
+  box-shadow: 0 0 0 8px rgba(201, 168, 106, 0.5);
+}
+
+.map-pin--legend {
+  display: inline-grid;
+  width: 1.1rem;
+  height: 1.1rem;
+
+  .map-pin__dot {
+    width: 8px;
+    height: 8px;
+    margin: 2px;
+  }
+}
+
+.map-cluster {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(7, 11, 20, 0.92);
+  color: $color-gold-soft;
+  border: 1px solid rgba(201, 168, 106, 0.75);
+  font-weight: 700;
+  box-shadow: $shadow-soft;
+}
+
+.map-cluster--legend {
+  width: 1.35rem;
+  height: 1.35rem;
+  font-size: 0.68rem;
+}
+
+.map .leaflet-container {
+  background: $color-night;
+  font-family: $font-body;
+}
+
+.map .leaflet-bar a {
+  width: 2.25rem;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  background: rgba(7, 11, 20, 0.9);
+  color: $color-gold-soft;
+  border-bottom-color: $color-border;
+}
+
+.map .leaflet-bar a:hover,
+.map .leaflet-bar a:focus {
+  background: rgba(12, 21, 38, 0.96);
+  color: $color-text;
+}
+
+.map .leaflet-container .leaflet-control-attribution {
+  max-width: min(18rem, 70%);
+  background: rgba(5, 8, 15, 0.82);
+  color: #d5deea;
+  font-size: 0.68rem;
+}
+
+.map .leaflet-control-attribution a {
+  color: $color-sky-soft;
+}
+
+.map .leaflet-popup-content-wrapper,
+.map .leaflet-popup-tip {
+  background: rgba(7, 11, 20, 0.96);
+  color: $color-text;
+  box-shadow: $shadow-soft;
+}
+
+.map .leaflet-popup-content-wrapper {
+  border: 1px solid rgba(201, 168, 106, 0.45);
+  border-radius: $radius-md;
+}
+
+.map .leaflet-popup-content {
+  margin: 0.75rem;
+  line-height: 1.4;
+}
+
+.map .leaflet-popup-close-button {
+  color: $color-text-muted;
+}
+
+.map-card__image {
+  display: block;
+  width: 100%;
+  height: 7.5rem;
+  object-fit: cover;
+  border-radius: $radius-sm;
+}
+
+.map-card__credit,
+.map-card__meta,
+.map-card__kicker {
+  margin: 0.35rem 0 0;
+}
+
+.map-card__kicker {
+  color: $color-gold-soft;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.map-card__title {
+  margin: 0.15rem 0 0;
+  font-family: $font-display;
+  font-size: 1.25rem;
+  line-height: 1.15;
+}
+
+.map-card__meta,
+.map-card__credit {
+  color: $color-text-muted;
+  font-size: 0.78rem;
+}
+
+.map-card__link {
+  display: inline-block;
+  margin-top: 0.55rem;
+  color: $color-gold-soft;
+  font-weight: 600;
+}
+
+.map-card__list {
+  margin: 0.45rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.85rem;
+
+  li + li {
+    margin-top: 0.3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .map .leaflet-zoom-anim .leaflet-zoom-animated {
+    transition: none;
+  }
 }
 
 .explorer-layout {
