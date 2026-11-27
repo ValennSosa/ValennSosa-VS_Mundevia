@@ -24,19 +24,13 @@
         <p class="page-header__eyebrow">Tu viaje</p>
         <h1 class="page-header__title">Favoritos</h1>
         <p class="page-header__lead" data-favorites-status>
-          Los favoritos se guardan en este navegador con localStorage.
+          Los favoritos se guardan en este navegador.
         </p>
       </header>
 
-      <section class="section section--tight">
-        <div class="u-container">
-          <div class="placeholder-panel" data-aos="fade-up" data-favorites-list>
-            <h2 class="placeholder-panel__title">Colección personal</h2>
-            <p class="u-mb-0">
-              Cuando exista el catálogo, aquí verás cards de destinos guardados con opción de eliminarlos.
-            </p>
-          </div>
-        </div>
+      <section class="section section--tight" aria-labelledby="favorites-title">
+        <h2 id="favorites-title" class="u-sr-only">Destinos guardados</h2>
+        <div class="u-container" data-favorites-list></div>
       </section>
     </main>
 

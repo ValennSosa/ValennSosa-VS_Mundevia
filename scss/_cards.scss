@@ -126,6 +126,13 @@
   aspect-ratio: 16 / 9;
 }
 
+.spot__save {
+  position: absolute;
+  z-index: 2;
+  top: 0.75rem;
+  right: 0.75rem;
+}
+
 .spot-row {
   display: grid;
   gap: $space-3;
@@ -138,6 +145,13 @@
   @include respond-up($bp-md) {
     grid-template-columns: 1fr auto;
   }
+}
+
+.spot-row__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+  align-items: center;
 }
 
 .spot-row__link {
@@ -202,6 +216,48 @@
   margin: 0;
   font-family: $font-display;
   font-size: 1.25rem;
+}
+
+.fav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.25rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  background: transparent;
+  color: $color-gold-soft;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background $transition-base, border-color $transition-base, color $transition-base;
+
+  &:hover,
+  &:focus-visible {
+    border-color: $color-gold;
+    color: $color-text;
+  }
+
+  &:focus-visible {
+    @include focus-ring($color-gold);
+  }
+
+  &[aria-pressed="true"] {
+    background: rgba(201, 168, 106, 0.16);
+    border-color: $color-gold;
+    color: $color-gold-soft;
+  }
+}
+
+.fav-toggle--overlay {
+  background: rgba(5, 8, 15, 0.82);
+  box-shadow: $shadow-soft;
+
+  &:focus-visible {
+    outline-offset: -2px;
+  }
 }
 
 .btn {

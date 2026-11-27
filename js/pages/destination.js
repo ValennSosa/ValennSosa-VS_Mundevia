@@ -3,6 +3,7 @@ import { renderGallery } from "../components/gallery.js";
 import { createDestinationCard } from "../components/destinationCard.js";
 import { typeLabel } from "../services/filters.js";
 import { ROUTES } from "../config.js";
+import { createFavoriteButton } from "../components/favoriteButton.js";
 
 /**
  * Fichas compartibles vía ?id=
@@ -138,6 +139,7 @@ function renderDestination(root, destination, { labels, related }) {
   `;
 
   renderGallery(root.querySelector("[data-destination-gallery]"), destination.images || []);
+  root.querySelector(".destination-hero__actions")?.append(createFavoriteButton(destination));
 
   const relatedList = root.querySelector("[data-related-list]");
   if (relatedList) {

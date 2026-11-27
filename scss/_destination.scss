@@ -7,6 +7,11 @@
 
 .destination-hero__actions {
   margin-top: $space-4;
+
+  .fav-toggle {
+    min-height: 2.75rem;
+    padding: 0.65rem 1.2rem;
+  }
 }
 
 .destination-meta {

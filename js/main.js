@@ -54,7 +54,7 @@ async function bootPage(page) {
     }
     case "surprise": {
       const { initSurprisePage } = await import("./pages/surprise.js");
-      initSurprisePage();
+      await initSurprisePage();
       break;
     }
     case "compare": {
@@ -64,7 +64,7 @@ async function bootPage(page) {
     }
     case "favorites": {
       const { initFavoritesPage } = await import("./pages/favorites.js");
-      initFavoritesPage();
+      await initFavoritesPage();
       break;
     }
     default:

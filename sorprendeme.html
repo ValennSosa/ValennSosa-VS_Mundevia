@@ -23,20 +23,35 @@
       <header class="page-header u-container">
         <p class="page-header__eyebrow">Descubrimiento aleatorio</p>
         <h1 class="page-header__title">Sorpréndeme</h1>
-        <p class="page-header__lead" data-surprise-status>
-          Un destino al azar, con transición visual y acceso a la ficha completa.
+        <p class="page-header__lead">
+          Un destino al azar, con fotografía, datos esenciales y acceso a la ficha completa.
         </p>
       </header>
 
-      <section class="section section--tight">
+      <section class="section section--tight" aria-labelledby="surprise-title">
         <div class="u-container">
-          <div class="placeholder-panel" data-aos="fade-up">
-            <h2 class="placeholder-panel__title">Escenario de descubrimiento</h2>
-            <p>
-              En la Etapa 4: selección aleatoria desde el JSON, animación de revelado,
-              botón “otro destino” y enlace directo a la ficha.
-            </p>
-            <button class="btn btn--primary" type="button" disabled>Sorprenderme (próximamente)</button>
+          <p class="surprise-status" data-surprise-status role="status">Buscando un destino…</p>
+          <article class="surprise" data-surprise-stage hidden>
+            <figure class="surprise__media">
+              <img data-surprise-image alt="" width="1280" height="800">
+              <figcaption class="surprise__credit" data-surprise-credit hidden></figcaption>
+            </figure>
+            <div class="surprise__copy">
+              <p class="surprise__kicker" data-surprise-kicker></p>
+              <h2 class="surprise__title" id="surprise-title" data-surprise-title></h2>
+              <p class="surprise__meta" data-surprise-meta></p>
+              <p class="surprise__text" data-surprise-text></p>
+              <div class="surprise__actions">
+                <button class="btn btn--primary" type="button" data-surprise-next>Otro destino</button>
+                <a class="btn btn--ghost" data-surprise-link href="destino.html">Ver destino</a>
+                <div data-surprise-save></div>
+              </div>
+            </div>
+          </article>
+          <div class="empty-state" data-surprise-fallback hidden>
+            <h2 class="empty-state__title" data-surprise-fallback-title>No hay destinos para mostrar</h2>
+            <p data-surprise-fallback-text></p>
+            <a class="btn btn--primary" href="explorador.html">Ir al explorador</a>
           </div>
         </div>
       </section>

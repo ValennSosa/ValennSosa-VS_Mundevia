@@ -70,7 +70,7 @@ export async function initMap(container, { destinations = [] } = {}) {
   return api;
 }
 
-function createController({ L, map, tiles, group, container, status, empty, reduced, destinations }) {
+function createController({ L, map, tiles, group, canvas, container, status, empty, reduced, destinations }) {
   let current = withCoords(destinations);
   let knownTotal = current.length;
   let markerIndex = new Map();

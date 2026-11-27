@@ -1,5 +1,6 @@
 import { destinationHref } from "../config.js";
 import { getImage } from "../data/destinations.js";
+import { createFavoriteButton } from "./favoriteButton.js";
 
 const TYPE_FALLBACK = {
   ciudad: "Ciudad",
@@ -42,6 +43,11 @@ export function createDestinationCard(destination, { labels = {}, variant = "edi
     </a>
   `;
 
+  const save = document.createElement("div");
+  save.className = "spot__save";
+  save.append(createFavoriteButton(destination, { overlay: true }));
+  article.append(save);
+
   return article;
 }
 
@@ -68,18 +74,21 @@ export function createDestinationRow(destination, { labels = {}, onLocate } = {}
         <p class="spot__meta">${escapeHtml(`${destination.city} · ${destination.country} · ${destination.continent}`)}</p>
       </div>
     </a>
-    ${
-      onLocate
-        ? `<button class="spot-row__locate" type="button">En el mapa</button>`
-        : ""
-    }
   `;
 
+  const actions = document.createElement("div");
+  actions.className = "spot-row__actions";
   if (onLocate) {
-    const button = row.querySelector(".spot-row__locate");
+    const button = document.createElement("button");
+    button.className = "spot-row__locate";
+    button.type = "button";
+    button.textContent = "En el mapa";
     button.setAttribute("aria-label", `Ver ${destination.name} en el mapa`);
     button.addEventListener("click", () => onLocate(destination));
+    actions.append(button);
   }
+  actions.append(createFavoriteButton(destination));
+  row.append(actions);
 
   return row;
 }
