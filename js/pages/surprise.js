@@ -63,7 +63,11 @@ export async function initSurprisePage() {
         credit.textContent = parts.join(" · ");
         if (image?.licenseUrl) {
           const anchor = document.createElement("a");
-          anchor.href = image.licenseUrl;
+          anchor.href = image.licenseUrl.startsWith("http://")
+            ? `https://${image.licenseUrl.slice("http://".length)}`
+            : image.licenseUrl;
+          anchor.target = "_blank";
+          anchor.rel = "noopener noreferrer";
           anchor.textContent = image.license || "Licencia";
           credit.replaceChildren();
           if (image.credit) {

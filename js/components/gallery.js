@@ -40,11 +40,35 @@ export function renderGallery(container, images = []) {
 
 function creditHtml(image) {
   if (!image.credit && !image.source && !image.license) return "";
-  const label = [image.credit, image.source, image.license].filter(Boolean).join(" · ");
-  const inner = image.licenseUrl
-    ? `<a href="${escapeAttr(image.licenseUrl)}" rel="noopener noreferrer">${escapeHtml(label)}</a>`
-    : escapeHtml(label);
-  return `<figcaption class="destination-gallery__credit">Foto: ${inner}</figcaption>`;
+  const parts = [];
+  if (image.credit) {
+    parts.push(image.authorUrl ? externalLink(image.authorUrl, image.credit) : escapeHtml(image.credit));
+  }
+  const fileUrl = commonsFileUrl(image.file);
+  if (image.source) {
+    parts.push(fileUrl && /wikimedia commons/i.test(image.source) ? externalLink(fileUrl, image.source) : escapeHtml(image.source));
+  }
+  if (image.license) {
+    const licenseUrl = licensePageUrl(image.licenseUrl);
+    parts.push(licenseUrl ? externalLink(licenseUrl, image.license) : escapeHtml(image.license));
+  }
+  return `<figcaption class="destination-gallery__credit">Foto: ${parts.join(" · ")}</figcaption>`;
+}
+
+function externalLink(href, label) {
+  return `<a href="${escapeAttr(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`;
+}
+
+function commonsFileUrl(file) {
+  if (!file || !file.startsWith("File:")) return "";
+  return `https://commons.wikimedia.org/wiki/${encodeURI(file.replaceAll(" ", "_"))}`;
+}
+
+function licensePageUrl(url) {
+  if (!url) return "";
+  const absolute = url.startsWith("http://") ? `https://${url.slice("http://".length)}` : url;
+  if (/commons\.wikimedia\.org\/wiki\/Commons:Licensing/i.test(absolute)) return "";
+  return absolute;
 }
 
 function escapeHtml(value) {

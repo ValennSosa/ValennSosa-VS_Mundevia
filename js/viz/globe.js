@@ -89,9 +89,9 @@ async function mountGlobe(THREE, OrbitControls, container, destinations) {
         Arrastrá para girar. Usá la rueda o un pellizco para acercar. Elegí un punto para ver el destino.
       </p>
       <p class="globe__credit">
-        <a href="https://commons.wikimedia.org/wiki/File:Land_ocean_ice_2048.jpg">Blue Marble</a>
+        <a href="https://commons.wikimedia.org/wiki/File:Land_ocean_ice_2048.jpg" target="_blank" rel="noopener noreferrer">Blue Marble</a>
         · NASA / Reto Stöckli y Robert Simmon ·
-        <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.es">CC BY-SA 3.0</a>
+        <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.es" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>
       </p>
     </div>
   `;
