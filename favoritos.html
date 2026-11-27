@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoritos · VS Mundévia</title>
+    <meta name="description" content="Tus destinos guardados en VS Mundévia. Persistencia local con localStorage.">
+    <meta property="og:title" content="Favoritos · VS Mundévia">
+    <meta property="og:description" content="Consultá y gestioná los destinos que marcaste como favoritos.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
+    <link rel="stylesheet" href="./styles/style.css">
+  </head>
+  <body>
+    <a class="u-skip-link" href="#contenido">Saltar al contenido</a>
+    <div data-app-header></div>
+
+    <main id="contenido" class="site-main page-shell">
+      <header class="page-header u-container">
+        <p class="page-header__eyebrow">Tu viaje</p>
+        <h1 class="page-header__title">Favoritos</h1>
+        <p class="page-header__lead" data-favorites-status>
+          Los favoritos se guardan en este navegador con localStorage.
+        </p>
+      </header>
+
+      <section class="section section--tight">
+        <div class="u-container">
+          <div class="placeholder-panel" data-aos="fade-up" data-favorites-list>
+            <h2 class="placeholder-panel__title">Colección personal</h2>
+            <p class="u-mb-0">
+              Cuando exista el catálogo, aquí verás cards de destinos guardados con opción de eliminarlos.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-app-footer></div>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/aos/dist/aos.js"></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

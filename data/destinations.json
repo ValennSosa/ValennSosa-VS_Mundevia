@@ -1,0 +1,9 @@
+{
+  "meta": {
+    "version": 1,
+    "updated": "2026-03-11",
+    "imageStrategy": "external-urls",
+    "notes": "Todas las URLs de imagen deben vivir aquí. En el futuro se pueden reemplazar por assets locales en /assets/images."
+  },
+  "destinations": []
+}

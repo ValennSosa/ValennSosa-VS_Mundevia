@@ -1,0 +1,54 @@
+@use "variables" as *;
+
+@mixin respond-up($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin respond-down($breakpoint) {
+  @media (max-width: ($breakpoint - 0.02px)) {
+    @content;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@mixin focus-ring($color: $color-sky) {
+  outline: 2px solid $color;
+  outline-offset: 3px;
+}
+
+@mixin section-padding {
+  padding-block: $space-5;
+
+  @include respond-up($bp-md) {
+    padding-block: $space-6;
+  }
+}
+
+@mixin text-balance {
+  text-wrap: balance;
+}
+
+@mixin reduce-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}

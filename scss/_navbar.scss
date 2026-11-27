@@ -1,0 +1,132 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: $z-nav;
+  backdrop-filter: blur(14px);
+  background: rgba(5, 8, 15, 0.78);
+  border-bottom: 1px solid $color-border;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-3;
+  min-height: $nav-height;
+  width: min(100% - 2rem, $container-max);
+  margin-inline: auto;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  color: $color-text;
+  text-decoration: none;
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.brand__mark {
+  font-family: $font-display;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  color: $color-gold-soft;
+}
+
+.brand__tag {
+  display: none;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $color-text-muted;
+
+  @include respond-up($bp-md) {
+    display: inline;
+  }
+}
+
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  background: transparent;
+  color: $color-text;
+  cursor: pointer;
+
+  @include respond-up($bp-lg) {
+    display: none;
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.nav-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 1rem;
+  left: 1rem;
+  display: none;
+  flex-direction: column;
+  gap: $space-1;
+  padding: $space-3;
+  background: $color-navy;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  box-shadow: $shadow-soft;
+
+  &.is-open {
+    display: flex;
+  }
+
+  @include respond-up($bp-lg) {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: $space-1;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+}
+
+.nav-link {
+  display: block;
+  padding: 0.65rem 0.9rem;
+  border-radius: $radius-sm;
+  color: $color-text-muted;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color $transition-base, background $transition-base;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-text;
+    background: rgba(126, 184, 212, 0.08);
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+
+  &.is-active {
+    color: $color-gold-soft;
+    background: rgba(201, 168, 106, 0.1);
+  }
+}

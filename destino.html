@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de destino · VS Mundévia</title>
+    <meta name="description" content="Ficha cultural y geográfica de un destino en VS Mundévia. Compartible mediante enlace directo.">
+    <meta property="og:title" content="Ficha de destino · VS Mundévia">
+    <meta property="og:description" content="Cultura, gastronomía, clima, tradiciones y curiosidades de cada lugar.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
+    <link rel="stylesheet" href="./styles/style.css">
+  </head>
+  <body>
+    <a class="u-skip-link" href="#contenido">Saltar al contenido</a>
+    <div data-app-header></div>
+
+    <main id="contenido" class="site-main page-shell">
+      <header class="destination-hero u-container">
+        <p class="page-header__eyebrow">Ficha compartible</p>
+        <h1 class="page-header__title">Destino</h1>
+        <p class="page-header__lead" data-destination-status>
+          Las fichas se abren con enlaces directos del tipo destino.html?id=slug.
+        </p>
+        <p class="destination-meta">
+          <span>País · Continente</span>
+          <span>Coordenadas</span>
+        </p>
+      </header>
+
+      <section class="section section--tight">
+        <div class="u-container u-stack-lg">
+          <div class="destination-gallery" data-destination-gallery></div>
+
+          <div class="destination-facts">
+            <article class="fact">
+              <h2 class="fact__label">Cultura</h2>
+              <p class="fact__value u-text-muted">Se completará con el catálogo JSON.</p>
+            </article>
+            <article class="fact">
+              <h2 class="fact__label">Gastronomía</h2>
+              <p class="fact__value u-text-muted">Se completará con el catálogo JSON.</p>
+            </article>
+            <article class="fact">
+              <h2 class="fact__label">Clima y mejor época</h2>
+              <p class="fact__value u-text-muted">Se completará con el catálogo JSON.</p>
+            </article>
+            <article class="fact">
+              <h2 class="fact__label">Idiomas y moneda</h2>
+              <p class="fact__value u-text-muted">Se completará con el catálogo JSON.</p>
+            </article>
+          </div>
+
+          <div class="hero__actions">
+            <a class="btn btn--ghost" href="./comparar.html">Comparar</a>
+            <a class="btn btn--ghost" href="./favoritos.html">Favoritos</a>
+            <a class="btn btn--primary" href="./explorador.html">Volver al mapa</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-app-footer></div>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/aos/dist/aos.js"></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.destination-hero {
+  padding-block: $space-5 $space-4;
+}
+
+.destination-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2 $space-3;
+  margin: $space-3 0 0;
+  color: $color-text-muted;
+  font-size: 0.95rem;
+}
+
+.destination-gallery {
+  display: grid;
+  gap: $space-3;
+
+  @include respond-up($bp-md) {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.destination-facts {
+  display: grid;
+  gap: $space-3;
+
+  @include respond-up($bp-md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.fact {
+  padding: $space-3;
+  background: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+}
+
+.fact__label {
+  margin: 0 0 $space-1;
+  color: $color-gold-soft;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fact__value {
+  margin: 0;
+}

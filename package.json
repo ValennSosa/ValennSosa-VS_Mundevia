@@ -1,0 +1,25 @@
+{
+  "name": "vs-mundevia",
+  "version": "0.1.0",
+  "description": "VS Mundévia — Explorador digital del mundo (frontend)",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sass": "sass scss/main.scss styles/style.css --style=expanded",
+    "sass:watch": "sass --watch scss/main.scss:styles/style.css --style=expanded",
+    "sass:build": "sass scss/main.scss styles/style.css --style=compressed --no-source-map",
+    "start": "npx --yes serve . -p 3000"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "bootstrap": "^5.3.3",
+    "leaflet": "^1.9.4",
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "sass": "^1.81.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Mundévia — Explorador digital del mundo</title>
+    <meta name="description" content="Explorá países, culturas y lugares inesperados con VS Mundévia. Una experiencia visual de descubrimiento geográfico.">
+    <meta property="og:title" content="VS Mundévia — Explorador digital del mundo">
+    <meta property="og:description" content="Entrá sin destino y descubrí el mundo a través de una experiencia cinematográfica e interactiva.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
+    <link rel="stylesheet" href="./styles/style.css">
+  </head>
+  <body>
+    <a class="u-skip-link" href="#contenido">Saltar al contenido</a>
+    <div data-app-header></div>
+
+    <main id="contenido" class="site-main page-shell">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__media" aria-hidden="true"></div>
+        <div class="hero__globe-slot" data-globe aria-hidden="true"></div>
+        <div class="hero__content">
+          <p class="hero__eyebrow" data-aos="fade-up">Turismo · Cultura · Exploración</p>
+          <h1 id="hero-title" class="hero__title" data-aos="fade-up" data-aos-delay="60">VS&nbsp;Mundévia</h1>
+          <p class="hero__lead" data-aos="fade-up" data-aos-delay="120">
+            Entrá sin un destino en mente. Dejá que la curiosidad te lleve a países, paisajes y culturas que quizás nunca habías escuchado mencionar.
+          </p>
+          <div class="hero__actions" data-aos="fade-up" data-aos-delay="180">
+            <a class="btn btn--primary" href="./explorador.html">Abrir mapa global</a>
+            <a class="btn btn--ghost" href="./sorprendeme.html">Sorpréndeme</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="search-title">
+        <div class="u-container u-stack">
+          <h2 id="search-title">Buscar destinos</h2>
+          <p class="u-text-muted u-mb-0">País, ciudad, continente, tipo o características. Sugerencias dinámicas al escribir.</p>
+          <div class="u-surface" style="padding: 1rem;" data-search-root>
+            <label class="u-sr-only" for="home-search">Buscar destinos</label>
+            <input
+              id="home-search"
+              class="form-control"
+              type="search"
+              placeholder="Ej. Kyoto, Patagonia, desierto…"
+              autocomplete="off"
+              data-search-input
+            >
+            <ul id="search-suggestions" class="list-unstyled mt-2 mb-0" role="listbox" data-search-suggestions hidden></ul>
+          </div>
+          <p>
+            <a href="./explorador.html">Alternativa sin globo:</a>
+            explorá el catálogo y el mapa, o usá la navegación por teclado del menú.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--tight" aria-labelledby="continents-title">
+        <div class="u-container">
+          <h2 id="continents-title" data-aos="fade-up">Explorar por continente</h2>
+          <p class="u-text-muted" data-aos="fade-up">Acceso textual y accesible, independiente del globo 3D.</p>
+          <div class="grid-feature" data-aos="fade-up">
+            <a class="placeholder-panel" href="./explorador.html?continente=Africa">África</a>
+            <a class="placeholder-panel" href="./explorador.html?continente=América">América</a>
+            <a class="placeholder-panel" href="./explorador.html?continente=Asia">Asia</a>
+            <a class="placeholder-panel" href="./explorador.html?continente=Europa">Europa</a>
+            <a class="placeholder-panel" href="./explorador.html?continente=Oceanía">Oceanía</a>
+            <a class="placeholder-panel" href="./explorador.html?continente=Antártida">Antártida</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="teasers-title">
+        <div class="u-container u-stack-lg">
+          <div>
+            <h2 id="teasers-title">Próximas secciones</h2>
+            <p class="u-text-muted">Estructura lista para destinos populares, descubrimientos aleatorios y datos curiosos.</p>
+          </div>
+          <div class="grid-feature">
+            <div class="placeholder-panel" data-aos="fade-up">
+              <h3 class="placeholder-panel__title">Destinos populares</h3>
+              <p class="u-mb-0">Se alimentarán desde el JSON en la Etapa 1.</p>
+            </div>
+            <div class="placeholder-panel" data-aos="fade-up" data-aos-delay="80">
+              <h3 class="placeholder-panel__title">Descubrimientos</h3>
+              <p class="u-mb-0">Teaser hacia Sorpréndeme y fichas compartibles.</p>
+            </div>
+            <div class="placeholder-panel" data-aos="fade-up" data-aos-delay="160">
+              <h3 class="placeholder-panel__title">Dato curioso</h3>
+              <p class="u-mb-0">Rotación de curiosidades verificables del catálogo.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-app-footer></div>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/aos/dist/aos.js"></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
